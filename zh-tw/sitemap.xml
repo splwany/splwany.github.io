@@ -6,13 +6,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/alert/"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/alert/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/alert/"
+                hreflang="en"
+                href="/en/tags/alert/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -24,13 +24,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/alert/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/alert/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/alert/"
+                hreflang="en"
+                href="/en/posts/shortcodes/alert/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -42,13 +42,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/bilibili/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/bilibili/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/bilibili/"
+                hreflang="en"
+                href="/en/posts/shortcodes/bilibili/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -60,13 +60,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/codepen/"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/codepen/"
+                hreflang="en"
+                href="/en/tags/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -78,13 +78,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/codepen/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/codepen/"
+                hreflang="en"
+                href="/en/posts/shortcodes/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -92,35 +92,17 @@
                 href="/zh-tw/posts/shortcodes/codepen/"
                 />
   </url><url>
-    <loc>/zh-tw/</loc>
-    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="/zh-tw/"
-                />
-  </url><url>
     <loc>/zh-tw/tags/jsfiddle/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/jsfiddle/"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/jsfiddle/"
+                hreflang="en"
+                href="/en/tags/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -132,13 +114,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/jsfiddle/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/jsfiddle/"
+                hreflang="en"
+                href="/en/posts/shortcodes/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -150,13 +132,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/jsrun/"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/jsrun/"
+                hreflang="en"
+                href="/en/tags/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -168,13 +150,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/jsrun/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/jsrun/"
+                hreflang="en"
+                href="/en/posts/shortcodes/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -186,13 +168,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/categories/shortcode/"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/shortcode/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/categories/shortcode/"
+                hreflang="en"
+                href="/en/categories/shortcode/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -204,13 +186,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/"
+                hreflang="en"
+                href="/en/posts/shortcodes/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -222,13 +204,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/youku/"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/youku/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/youku/"
+                hreflang="en"
+                href="/en/tags/youku/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -240,13 +222,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/youku/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/youku/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/youku/"
+                hreflang="en"
+                href="/en/posts/shortcodes/youku/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -258,13 +240,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/categories/"
+                hreflang="zh-cn"
+                href="/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/categories/"
+                hreflang="en"
+                href="/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -275,17 +257,35 @@
     <loc>/zh-tw/tags/%E5%97%B6%E5%93%A9%E5%97%B6%E5%93%A9/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/zh-tw/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="/zh-tw/"
+                />
+  </url><url>
     <loc>/zh-tw/series/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/series/"
+                hreflang="zh-cn"
+                href="/zh-cn/series/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/series/"
+                hreflang="en"
+                href="/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -300,13 +300,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/iqiyi/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/iqiyi/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/iqiyi/"
+                hreflang="en"
+                href="/en/posts/shortcodes/iqiyi/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -318,13 +318,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/"
+                hreflang="en"
+                href="/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -336,13 +336,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/"
+                hreflang="en"
+                href="/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -360,13 +360,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/neteasemusic/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/neteasemusic/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/neteasemusic/"
+                hreflang="en"
+                href="/en/posts/shortcodes/neteasemusic/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -381,13 +381,13 @@
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/tencentvideo/"
+                hreflang="zh-cn"
+                href="/zh-cn/posts/shortcodes/tencentvideo/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/posts/shortcodes/tencentvideo/"
+                hreflang="en"
+                href="/en/posts/shortcodes/tencentvideo/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -398,13 +398,13 @@
     <loc>/zh-tw/search/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/search/"
+                hreflang="zh-cn"
+                href="/zh-cn/search/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/search/"
+                hreflang="en"
+                href="/en/search/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -415,13 +415,13 @@
     <loc>/zh-tw/archives/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/archives/"
+                hreflang="zh-cn"
+                href="/zh-cn/archives/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/archives/"
+                hreflang="en"
+                href="/en/archives/"
                 />
     <xhtml:link
                 rel="alternate"
