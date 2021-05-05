@@ -11,11 +11,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/alert/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/tags/alert/"
                 />
@@ -26,11 +21,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/posts/shortcodes/alert/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/alert/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -47,11 +37,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/bilibili/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/bilibili/"
                 />
@@ -62,11 +47,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/tags/codepen/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -83,11 +63,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/codepen/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/codepen/"
                 />
@@ -98,11 +73,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/tags/jsfiddle/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -119,11 +89,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/jsfiddle/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/jsfiddle/"
                 />
@@ -134,11 +99,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/tags/jsrun/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -155,11 +115,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/jsrun/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/jsrun/"
                 />
@@ -170,11 +125,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/categories/shortcode/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/categories/shortcode/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -191,11 +141,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/"
                 />
@@ -209,11 +154,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/tags/youku/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/tags/youku/"
                 />
@@ -224,11 +164,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/posts/shortcodes/youku/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/youku/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -305,11 +240,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/iqiyi/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/iqiyi/"
                 />
@@ -365,11 +295,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/neteasemusic/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-tw"
                 href="/zh-tw/posts/shortcodes/neteasemusic/"
                 />
@@ -383,11 +308,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="/zh-cn/posts/shortcodes/tencentvideo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/posts/shortcodes/tencentvideo/"
                 />
     <xhtml:link
                 rel="alternate"
