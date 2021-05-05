@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webnote on 在下傲娇的泰迪</title>
+    <link>/zh-cn/posts/webnotes/</link>
+    <description>Recent content in Webnote on 在下傲娇的泰迪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 05 May 2021 20:45:33 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习HTML</title>
+      <link>/zh-cn/posts/webnotes/learn_html/</link>
+      <pubDate>Wed, 05 May 2021 20:45:33 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/webnotes/learn_html/</guid>
+      <description>从MDN学习HTML的知识</description>
+    </item>
+    
+  </channel>
+</rss>

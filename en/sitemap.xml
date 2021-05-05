@@ -7,6 +7,16 @@
   </url><url>
     <loc>/en/tags/html/</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/html/"
+                />
   </url><url>
     <loc>/en/tags/markdown/</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
