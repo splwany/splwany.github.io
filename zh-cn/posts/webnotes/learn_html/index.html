@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="学习HTML">
 <meta itemprop="description" content="MDN文档的HTML学习笔记"><meta itemprop="datePublished" content="2021-05-05T20:45:33&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-05T20:45:33&#43;08:00" />
-<meta itemprop="wordCount" content="18">
+<meta itemprop="wordCount" content="1021">
 <meta itemprop="keywords" content="HTML," /><meta property="og:title" content="学习HTML" />
 <meta property="og:description" content="MDN文档的HTML学习笔记" />
 <meta property="og:type" content="article" />
@@ -148,11 +148,107 @@
     <i class="fas fa-fw fa-calendar-alt"></i>2021-05-05
   </span>
   <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
   </span>
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/html/" class="post-taxonomy">#HTML</a></div>
-<div class="post-content mb-3"><p>MDN文档的HTML学习笔记</p>
-<h4 id="教程视频">教程视频</h4>
+<a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-嵌入"><strong>1. 嵌入</strong></a>
+      <ul>
+        <li><a href="#iframe-元素httpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingother_embedding_technologiesiframee8afa6e8a7a3"><strong><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#iframe%E8%AF%A6%E8%A7%A3">&lt;iframe&gt; 元素</a></strong></a></li>
+        <li><a href="#embed-和-object-元素httpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingother_embedding_technologies3cembed3ee5928c3cobject3ee58583e7b4a0"><strong><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#%3Cembed%3E%E5%92%8C%3Cobject%3E%E5%85%83%E7%B4%A0">&lt;embed&gt; 和 &lt;object&gt; 元素</a></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#2-矢量图形svghttpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingadding_vector_graphics_to_the_webe5b086svge6b7bbe58aa0e588b0e9a1b5e99da2"><strong>2. <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web#%E5%B0%86svg%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%A1%B5%E9%9D%A2">矢量图形SVG</a></strong></a>
+      <ul>
+        <li><a href="#快捷方式img"><strong>快捷方式：<code>&lt;img&gt;</code></strong></a></li>
+        <li><a href="#疑难解答和跨浏览器支持"><strong>疑难解答和跨浏览器支持</strong></a></li>
+        <li><a href="#在html中引入svg代码"><strong>在HTML中引入SVG代码</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#3-教程视频"><strong>3. 教程视频</strong></a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>MDN文档的HTML学习笔记</p>
+<br/>
+<h2 id="1-嵌入"><strong>1. 嵌入</strong></h2>
+<h3 id="iframe-元素httpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingother_embedding_technologiesiframee8afa6e8a7a3"><strong><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#iframe%E8%AF%A6%E8%A7%A3" target="_blank">&lt;iframe&gt; 元素</a>
+</strong></h3>
+<h4 id="sandbox属性"><strong>sandbox属性</strong></h4>
+<div class="alert alert-info" role="alert">
+  <i class="fas fa-fw fa-info-circle"></i>该属性需要在已经支持其他&lt;iframe&gt;功能（例如IE 10及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置。
+</div>
+
+<div class="alert alert-note" role="alert">
+  <i class="fas fa-fw fa-bell"></i>注意：为了提高速度，在主内容完成加载后，使用JavaScript设置iframe的src属性是个好主意。这使您的页面可以更快地被使用，并减少您的官方页面加载时间。
+</div>
+
+<h3 id="embed-和-object-元素httpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingother_embedding_technologies3cembed3ee5928c3cobject3ee58583e7b4a0"><strong><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#%3Cembed%3E%E5%92%8C%3Cobject%3E%E5%85%83%E7%B4%A0" target="_blank">&lt;embed&gt; 和 &lt;object&gt; 元素</a>
+</strong></h3>
+<p>这两个元素与&lt;iframe&gt;不同，是用来嵌入多种类型的外部内容的通用嵌入工具，包括像Java小程序和Flash，PDF（可在浏览器中显示为一个PDF插件）这样的插件技术，甚至像视频，SVG和图像的内容。</p>
+<div class="alert alert-note" role="alert">
+  <i class="fas fa-fw fa-bell"></i>插件是一种对浏览器原生无法读取的内容提供访问权限的软件
+</div>
+
+<br/>
+<h2 id="2-矢量图形svghttpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingadding_vector_graphics_to_the_webe5b086svge6b7bbe58aa0e588b0e9a1b5e99da2"><strong>2. <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web#%E5%B0%86svg%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%A1%B5%E9%9D%A2" target="_blank">矢量图形SVG</a>
+</strong></h2>
+<h3 id="快捷方式img"><strong>快捷方式：<code>&lt;img&gt;</code></strong></h3>
+<p>使用 <code>src</code> 属性设置SVG路径</p>
+<h3 id="疑难解答和跨浏览器支持"><strong>疑难解答和跨浏览器支持</strong></h3>
+<p>对于不支持SVG（IE 8及更低版本，Android 2.3 及更低版本）的浏览器，可以从 src 属性引用 PNG 或 JPG ，并使用 srcset 属性 只有最近的浏览器才能识别）来引用 SVG 。 在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG ：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;equilateral.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;triangle with equal sides&#34;</span> <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;equilateral.svg&#34;</span>&gt;
+</code></pre></div><p>还可以使用 SVG 作为 CSS 背景图像，如下所示。 在下面的代码中，旧版浏览器会坚持他们理解的 PNG ，而较新的浏览器将加载 SVG ：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">svg</span> {
+  <span style="color:#66d9ef">background</span>: url(<span style="color:#e6db74">&#34;fallback.png&#34;</span>) <span style="color:#66d9ef">no-repeat</span> <span style="color:#66d9ef">center</span>;
+  <span style="color:#66d9ef">background-image</span>: url(<span style="color:#e6db74">&#34;image.svg&#34;</span>);
+  <span style="color:#66d9ef">background-size</span>: <span style="color:#66d9ef">contain</span>;
+}
+</code></pre></div><p>像上面描述的<code>&lt;img&gt;</code>方法一样，使用 CSS 背景图像插入 SVG 意味着它不能被 JavaScript 操作，并且也受到相同的 CSS 限制。</p>
+<h3 id="在html中引入svg代码"><strong>在HTML中引入SVG代码</strong></h3>
+<blockquote>
+<p>可以在文本编辑器中打开SVG文件，复制SVG代码，并将其粘贴到HTML文档中 - 这有时称为将SVG内联或内联SVG。确保您的SVG代码在<code>&lt;svg&gt;&lt;/svg&gt;</code>标签中（不要在外面添加任何内容）。</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">svg</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;300&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span>&gt;
+    &lt;<span style="color:#f92672">rect</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span> <span style="color:#a6e22e">fill</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;green&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">svg</span>&gt;
+</code></pre></div><h4 id="优点"><strong>优点</strong></h4>
+<ul>
+<li>将 SVG 内联减少 HTTP 请求，可以减少加载时间。</li>
+<li>可以为 SVG 元素分配class和id，并使用 CSS 修改样式。</li>
+<li>内联 SVG 是唯一可以在 SVG 图像上使用 CSS 交互（如:focus）和 CSS 动画的方法（即使在常规样式表中）。</li>
+<li>可以通过将 SVG 标记包在 <code>&lt;a&gt;</code> 元素中，使其成为超链接。</li>
+</ul>
+<h4 id="缺点"><strong>缺点</strong></h4>
+<ul>
+<li>这种方法只适用于在一个地方使用的 SVG 。多次使用会导致资源密集型维护（resource-intensive maintenance）。</li>
+<li>额外的 SVG 代码会增加 HTML 文件的大小。</li>
+<li>浏览器不能像缓存普通图片一样缓存内联 SVG 。</li>
+<li>可能会在 <code>&lt;foreignObject&gt;</code> 元素中包含回退，但支持 SVG 的浏览器仍然会下载任何后备图像。考虑一下仅仅为支持过时的浏览器，而增加额外开销是否真的值得。</li>
+</ul>
+<h4 id="示例"><strong>示例</strong></h4>
+<svg width="100%" height="150px">
+  <rect width="100%" height="150px" fill="hsl(0, 60%, 40%)" />
+  <circle cx="100%" cy="100%" r="200" fill="hsl(200, 60%, 40%)" />
+  <polygon points="86.6,0 173.2,150 0,150" fill="hsl(120, 40%, 40%)"/>
+  <text x="155" y="95" font-family="Verdana" font-size="55" fill="hsl(0, 0%, 100%, 80%)">
+    遁入智瞳！上勾拳！
+  </text>
+</svg>
+<p><br/><br/></p>
+<h2 id="3-教程视频"><strong>3. 教程视频</strong></h2>
 <div class="ratio ratio-16x9 bilibili">
   <iframe
     src="//player.bilibili.com/player.html?bvid=BV1XJ411X7Ud&page=25"
