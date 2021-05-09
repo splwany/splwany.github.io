@@ -355,8 +355,10 @@ style="width: 180px;"></p>
   <i class="fas fa-fw fa-bell"></i>应该仅仅在美术设计场景下使用media属性；当使用media时，不要在sizes属性中也提供媒体条件。
 </div>
 
+<br/>
 <h3 id="为什么不能使用-css-或-javascript-来做到这一效果"><strong>为什么不能使用 CSS 或 JavaScript 来做到这一效果？</strong></h3>
 <p>如果使用CSS或JavaScript来实现这一效果，在这之前原始图像已经被加载了，然后CSS或JavaScript又加载了一个小的图像，反而浪费发了流量。</p>
+<br/>
 <h3 id="大胆使用现代图像格式"><strong>大胆使用现代图像格式</strong></h3>
 <p>新图像格式（例如 WebP 和 JPEG-2000）可以在有高质量的同时有较低的文件大小。但是浏览器支持情况不同。</p>
 <p>可以使用 <code>&lt;picture&gt;</code> 来继续满足老式浏览器的需要。可以在 <code>type</code> 属性中提供 MIME 类型，这样浏览器就能立即拒绝不支持的类型：</p>
