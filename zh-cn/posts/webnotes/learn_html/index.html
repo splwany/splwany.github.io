@@ -344,13 +344,15 @@ style="width: 180px;"></p>
   &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/posts/webnotes/learn_html/mercy-1280w.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Overwatch mercy&#34;</span>&gt;
 &lt;/<span style="color:#f92672">picture</span>&gt;
 </code></pre></div><p>效果（调整浏览器宽度以查看变化）：</p>
-<picture>
-  <source media="(max-width: 424px)" srcset="/images/posts/webnotes/learn_html/mercy-320w.png">
-  <source media="(max-width: 767px)" srcset="/images/posts/webnotes/learn_html/mercy-480w.png">
-  <source media="(max-width: 991px)" srcset="/images/posts/webnotes/learn_html/mercy-800w.png">
-  <source srcset="/images/posts/webnotes/learn_html/mercy-1280w.png">
-  <img src="/images/posts/webnotes/learn_html/mercy-1280w.jpg" alt="Overwatch mercy" class="image">
-</picture>
+<p>
+  <picture>
+    <source media="(max-width: 424px)" srcset="/images/posts/webnotes/learn_html/mercy-320w.png">
+    <source media="(max-width: 767px)" srcset="/images/posts/webnotes/learn_html/mercy-480w.png">
+    <source media="(max-width: 991px)" srcset="/images/posts/webnotes/learn_html/mercy-800w.png">
+    <source srcset="/images/posts/webnotes/learn_html/mercy-1280w.png">
+    <img src="/images/posts/webnotes/learn_html/mercy-1280w.jpg" alt="Overwatch mercy" class="image">
+  </picture>
+</p>
 <div class="alert alert-note" role="alert">
   <i class="fas fa-fw fa-bell"></i>应该仅仅在美术设计场景下使用media属性；当使用media时，不要在sizes属性中也提供媒体条件。
 </div>
