@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python小贴士 - 在下傲娇的泰迪</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="description" content="" /><meta itemprop="name" content="Python小贴士">
+<meta itemprop="description" content="Python的一些使用技巧和有趣的库"><meta itemprop="datePublished" content="2021-05-12T14:52:58&#43;08:00" />
+<meta itemprop="dateModified" content="2021-05-12T14:52:58&#43;08:00" />
+<meta itemprop="wordCount" content="521">
+<meta itemprop="keywords" content="dataclasses,namedtuple," /><meta property="og:title" content="Python小贴士" />
+<meta property="og:description" content="Python的一些使用技巧和有趣的库" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/zh-cn/posts/pythons/python_tips/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-12T14:52:58&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-12T14:52:58&#43;08:00" /><meta property="og:site_name" content="在下傲娇的泰迪" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python小贴士"/>
+<meta name="twitter:description" content="Python的一些使用技巧和有趣的库"/>
+<meta name="twitter:site" content="@splwany"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.ac34a2306c938313b9ab48f37323f1314b7e2c92885f4a0f87050ee8c628c89d.css" integrity="sha256-rDSiMGyTgxO5q0jzcyPxMUt&#43;LJKIX0oPhwUO6MYoyJ0=" crossorigin="anonymous"><script src="/js/bundle.min.3367f45551af6a5a84ad78de8f9df6cba14f9b8ee46cf7a3d23d1194465c5910.js" integrity="sha256-M2f0VVGvalqErXjej532y6FPm47kbPej0j0RlEZcWRA=" crossorigin="anonymous"></script>
+</head><body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/zh-cn/">
+      <img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy">傲娇的泰迪の博客</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0"><form class="search-bar d-flex ms-1" action="/zh-cn/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/posts">
+            <i class="fas fa-fw fa-file-alt"></i>文章
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            更多
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-dropdown"><li>
+              <a class="dropdown-item"
+                href="https://github.com/splwany/splwany.github.io" target="_blank">
+                <i class="fab fa-fw fa-github"></i>Github
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://space.bilibili.com/6936496" target="_blank">
+                <i class="fab fa-fw iconfont icon-bilibili"></i>哔哩哔哩
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="languageSwitcher" data-bs-toggle="popover"
+    data-bs-placement="bottom" data-bs-target="#languagesPopoverBody" data-bs-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item"><a href="/zh-tw/">繁體中文</a></li><li class="language list-group-item"><a href="/en/">English</a></li></ul>
+</script><li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="paletteSwitcher" data-bs-toggle="popover" data-bs-placement="bottom" 
+    data-bs-target="#palettesPopoverBody" data-bs-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+<li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="fontSizeSwitcher" data-bs-toggle="popover" data-bs-placement="bottom" 
+    data-bs-target="#fontSizesPopoverBody" data-bs-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/">文章</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/pythons/">Python笔记</a></li><li class="breadcrumb-item active">Python小贴士</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">Python小贴士</h1><div class="post-meta mb-3">
+  <span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-12
+  </span>
+  <span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/python/" class="post-taxonomy">#python</a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy">#dataclasses</a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy">#namedtuple</a></div>
+<a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-dataclasses"><strong>1. dataclasses</strong></a></li>
+    <li><a href="#2-namedtuple"><strong>2. namedtuple</strong></a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>Python的一些使用技巧和有趣的库</p>
+<br/>
+<h2 id="1-dataclasses"><strong>1. dataclasses</strong></h2>
+<blockquote>
+<p>python3.7引入的内置库，实现数据类，可以利用上内置的类型提示</p>
+</blockquote>
+<p><strong>使用方法：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> dataclasses <span style="color:#f92672">as</span> dc
+
+<span style="color:#a6e22e">@dc.dataclass</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>:
+    name: str  <span style="color:#75715e"># 简单说明类型</span>
+    age: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># 设置默认值</span>
+    sex: str <span style="color:#f92672">=</span> dc<span style="color:#f92672">.</span>field(default<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;male&#39;</span>, repr<span style="color:#f92672">=</span>False) <span style="color:#75715e"># 除了默认值，还可通过repr设置是否显示在字符串输出中</span>
+
+<span style="color:#75715e"># 创建一个Person实例</span>
+p1 <span style="color:#f92672">=</span> Person(<span style="color:#e6db74">&#39;zhangyan&#39;</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;female&#39;</span>)
+<span style="color:#66d9ef">print</span>(p1)  <span style="color:#75715e"># Person(name=&#39;zhangyan&#39;, age=25, sex=&#39;female&#39;)</span>
+</code></pre></div><p><strong>还可以通过asdict和astuple将其转换为dict和tuple类型：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(dc<span style="color:#f92672">.</span>asdict(p1))  <span style="color:#75715e"># {&#39;name&#39;: &#39;zhangyan&#39;, &#39;age&#39;: 25, &#39;sex&#39;: &#39;female&#39;}</span>
+<span style="color:#66d9ef">print</span>(dc<span style="color:#f92672">.</span>astuple(p1))  <span style="color:#75715e"># (&#39;zhangyan&#39;, 25, female)</span>
+</code></pre></div><p><strong>dict类型转为dataclass</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">p2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;zhangyan&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;sex&#39;</span>: <span style="color:#e6db74">&#39;female&#39;</span>}
+<span style="color:#66d9ef">print</span>(Person(<span style="color:#f92672">**</span>p2))  <span style="color:#75715e"># Person(name=&#39;zhangyan&#39;, age=25, sex=&#39;female&#39;)</span>
+</code></pre></div><br/>
+<h2 id="2-namedtuple"><strong>2. namedtuple</strong></h2>
+<blockquote>
+<p>给元组命名，元组中的每一项也可以命名；<br>
+创建的元组实例内的值是不能更改的，但可以使用_replace()方法更改值后返回一个新的元组；<br>
+也可以当作一行代码定义一个类；<br>
+也可以当作数据类用，但是无法使用内置的类型提示，不如dataclasses。</p>
+</blockquote>
+<p><strong>使用方法：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> namedtuple
+
+Color <span style="color:#f92672">=</span> namedtuple(<span style="color:#e6db74">&#39;Color&#39;</span>, <span style="color:#e6db74">&#39;r g b a&#39;</span>, defaults<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1.0</span>])  <span style="color:#75715e"># &#39;r g b a&#39;还可以写为&#39;r, g, b, a&#39;或[&#39;r&#39;, &#39;g&#39;, &#39;b&#39;, &#39;a&#39;]</span>
+red <span style="color:#f92672">=</span> Color(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 红色</span>
+green <span style="color:#f92672">=</span> Color(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># 绿色</span>
+blue <span style="color:#f92672">=</span> Color(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>)  <span style="color:#75715e"># 蓝色</span>
+half_blue <span style="color:#f92672">=</span> Color(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0.5</span>) <span style="color:#75715e"># 透明度为50%的蓝色</span>
+<span style="color:#66d9ef">print</span>(half_blue)  <span style="color:#75715e"># Color(r=0, g=0, b=255, a=0.5)</span>
+half_blue <span style="color:#f92672">=</span> half_blue<span style="color:#f92672">.</span>_replace(g<span style="color:#f92672">=</span><span style="color:#ae81ff">233</span>)
+<span style="color:#66d9ef">print</span>(half_blue)
+orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</span>_make([<span style="color:#ae81ff">224</span>, <span style="color:#ae81ff">142</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>])  <span style="color:#75715e"># 使用_make函数通过传入一个可迭代对象来构建实例，设置了默认值的项依旧不能省略</span>
+<span style="color:#66d9ef">print</span>(orange)
+<span style="color:#66d9ef">print</span>(orange<span style="color:#f92672">.</span>_asdict())  <span style="color:#75715e"># OrderedDict([(&#39;r&#39;, 224), (&#39;g&#39;, 142), (&#39;b&#39;, 0), (&#39;a&#39;, 1)])</span>
+<span style="color:#66d9ef">print</span>(tuple(orange))  <span style="color:#75715e"># (224, 142, 0, 1)</span>
+</code></pre></div></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-bs-toggle="modal" data-bs-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.jpg" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"></div>
+</div></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="splwany/splwany.github.io"
+  issue-term="pathname"
+  label="comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="/images/profile.webp" alt="Alan Wei" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/zh-cn/posts/pythons/python_tips/">Python小贴士</a></li><li><a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a></li><li><a href="/zh-cn/posts/webnotes/learn_html/">学习HTML</a></li><li><a href="/zh-cn/posts/shortcodes/alert/">Alert Shortcode</a></li><li><a href="/zh-cn/posts/shortcodes/bilibili/">Bilibili Shortcode</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/zh-cn/categories">分类</a>
+  </h4>
+  <div><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
+      Shortcode <span class="badge rounded-pill">9</span>
+    </a><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
+      学习笔记 <span class="badge rounded-pill">2</span>
+    </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
+      待办 <span class="badge rounded-pill">1</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/zh-cn/series">专栏</a>
+  </h4>
+  <div><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="前端">
+      前端 <span class="badge rounded-pill">2</span>
+    </a><a href="/zh-cn/series/python/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="python">
+      python <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="用户手册">
+      用户手册 <span class="badge rounded-pill">1</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/zh-cn/tags">标签</a>
+  </h4>
+  <div><a href="/zh-cn/tags/alert/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Alert">
+      Alert <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/codepen/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CodePen">
+      CodePen <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="dataclasses">
+      dataclasses <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/html/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="HTML">
+      HTML <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/jsfiddle/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JSFiddle">
+      JSFiddle <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/jsrun/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JSRun">
+      JSRun <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="namedtuple">
+      namedtuple <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/youku/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Youku">
+      Youku <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="哔哩哔哩">
+      哔哩哔哩 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="爱奇艺">
+      爱奇艺 <span class="badge rounded-pill">1</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:zhenzidanspl@163.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://facebook.com/100008192920152" title="Facebook">
+        <i class="fab fa-fw fa-2x fa-facebook-f"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/splwany" title="GitHub">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.instagram.com/splwany" title="Instagram">
+        <i class="fab fa-fw fa-2x fa-instagram"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.last.fm/user/splwany" title="Last.fm">
+        <i class="fab fa-fw fa-2x fa-lastfm"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://space.bilibili.com/6936496" title="Medium">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.quora.com/profile/Splwany-Wei" title="Quora">
+        <i class="fab fa-fw fa-2x fa-quora"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.reddit.com/user/splwany925" title="Reddit">
+        <i class="fab fa-fw fa-2x fa-reddit"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://twitter.com/splwany" title="Twitter">
+        <i class="fab fa-fw fa-2x fa-twitter"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://weibo.com/2341895933" title="Weibo">
+        <i class="fab fa-fw fa-2x fa-weibo"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/wei-xin-13-16" title="Zhihu">
+        <i class="fab fa-fw fa-2x fa-zhihu"></i>
+      </a>
+    </li></nav>
+<div class="copyright mb-2">
+  Copyright © 2020-2021 Alan Wei. All Rights Reserved.
+</div>
+</footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>
