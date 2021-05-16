@@ -2,23 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/zh-cn/tags/dataclasses/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <loc>/zh-cn/tags/css/</loc>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/css/"
+                />
   </url><url>
-    <loc>/zh-cn/tags/namedtuple/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/series/python/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/pythons/python_tips/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/pythons/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <loc>/zh-cn/posts/webnotes/</loc>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -36,7 +37,7 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -53,8 +54,11 @@
                 href="/zh-cn/categories/"
                 />
   </url><url>
+    <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
+  </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -71,11 +75,14 @@
                 href="/zh-cn/"
                 />
   </url><url>
+    <loc>/zh-cn/posts/webnotes/learn_css/</loc>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
+  </url><url>
     <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -93,7 +100,7 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/</loc>
-    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+    <lastmod>2021-05-16T16:11:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -110,11 +117,23 @@
                 href="/zh-cn/tags/"
                 />
   </url><url>
-    <loc>/zh-cn/posts/webnotes/</loc>
-    <lastmod>2021-05-06T10:18:08+08:00</lastmod>
+    <loc>/zh-cn/tags/dataclasses/</loc>
+    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-05-06T10:18:08+08:00</lastmod>
+    <loc>/zh-cn/tags/namedtuple/</loc>
+    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/series/python/</loc>
+    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/pythons/python_tips/</loc>
+    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/pythons/</loc>
+    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/tags/threading/</loc>
+    <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/categories/%E5%BE%85%E5%8A%9E/</loc>
     <lastmod>2021-05-06T10:18:08+08:00</lastmod>

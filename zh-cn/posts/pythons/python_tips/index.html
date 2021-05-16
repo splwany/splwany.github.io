@@ -11,8 +11,8 @@
 <meta name="description" content="" /><meta itemprop="name" content="Python小贴士">
 <meta itemprop="description" content="Python的一些使用技巧和有趣的库"><meta itemprop="datePublished" content="2021-05-12T14:52:58&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-12T14:52:58&#43;08:00" />
-<meta itemprop="wordCount" content="521">
-<meta itemprop="keywords" content="dataclasses,namedtuple," /><meta property="og:title" content="Python小贴士" />
+<meta itemprop="wordCount" content="673">
+<meta itemprop="keywords" content="dataclasses,namedtuple,threading," /><meta property="og:title" content="Python小贴士" />
 <meta property="og:description" content="Python的一些使用技巧和有趣的库" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/zh-cn/posts/pythons/python_tips/" /><meta property="article:section" content="posts" />
@@ -150,7 +150,7 @@
   <span class="post-reading-time me-2">
     <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
   </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/python/" class="post-taxonomy">#python</a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy">#dataclasses</a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy">#namedtuple</a></div>
+<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/python/" class="post-taxonomy">#python</a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy">#dataclasses</a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy">#namedtuple</a><a href="/zh-cn/tags/threading/" class="post-taxonomy">#threading</a></div>
 <a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
 </a>
 
@@ -166,6 +166,7 @@
   <ul>
     <li><a href="#1-dataclasses"><strong>1. dataclasses</strong></a></li>
     <li><a href="#2-namedtuple"><strong>2. namedtuple</strong></a></li>
+    <li><a href="#3-threading"><strong>3. threading</strong></a></li>
   </ul>
 </nav>
   </div>
@@ -216,6 +217,32 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
 <span style="color:#66d9ef">print</span>(orange)
 <span style="color:#66d9ef">print</span>(orange<span style="color:#f92672">.</span>_asdict())  <span style="color:#75715e"># OrderedDict([(&#39;r&#39;, 224), (&#39;g&#39;, 142), (&#39;b&#39;, 0), (&#39;a&#39;, 1)])</span>
 <span style="color:#66d9ef">print</span>(tuple(orange))  <span style="color:#75715e"># (224, 142, 0, 1)</span>
+</code></pre></div><br/>
+<h2 id="3-threading"><strong>3. threading</strong></h2>
+<blockquote>
+<p>实现类似 JavaScript 中的 setimeout 延迟运行的效果</p>
+</blockquote>
+<p><strong>使用方法：</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> threading
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">settimeout</span>(func, delay, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
+    threading<span style="color:#f92672">.</span>Timer(delay, func, args, kwargs)<span style="color:#f92672">.</span>start()
+
+<span style="color:#75715e"># 隔一秒输出一个 i，依次为 0 1 2 3 4</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    settimeout(<span style="color:#66d9ef">lambda</span> x: <span style="color:#66d9ef">print</span>(x), i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, i)
+
+<span style="color:#75715e"># 隔一秒输出一个 i，依次为 4 4 4 4 4</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    settimeout(<span style="color:#66d9ef">lambda</span> x: <span style="color:#66d9ef">print</span>(i), i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, i)
+
+<span style="color:#75715e"># 一秒后一起输出，依次为 44444</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    settimeout(<span style="color:#66d9ef">lambda</span> x: <span style="color:#66d9ef">print</span>(i, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>), <span style="color:#ae81ff">1</span>, i)
+
+<span style="color:#75715e"># 一秒后一起输出，顺序随机，例如：43201、12340</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">5</span>):
+    settimeout(<span style="color:#66d9ef">lambda</span> x: <span style="color:#66d9ef">print</span>(x, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>), <span style="color:#ae81ff">1</span>, i)
 </code></pre></div></div><div class="post-copyright mb-4">
   <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
 </div><div class="post-reward mb-4 text-center">
@@ -251,7 +278,9 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
   <div class="post-nav w-50"><div class="prev-post">
       <a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a>
     </div></div>
-  <div class="post-nav flex-row-reverse"></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/zh-cn/posts/webnotes/learn_css/">学习CSS</a>
+    </div></div>
 </div></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
   repo="splwany/splwany.github.io"
   issue-term="pathname"
@@ -269,7 +298,7 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
     <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
 </section><section class="recent-posts row surface">
   <h4>最近文章</h4>
-  <ul><li><a href="/zh-cn/posts/pythons/python_tips/">Python小贴士</a></li><li><a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a></li><li><a href="/zh-cn/posts/webnotes/learn_html/">学习HTML</a></li><li><a href="/zh-cn/posts/shortcodes/alert/">Alert Shortcode</a></li><li><a href="/zh-cn/posts/shortcodes/bilibili/">Bilibili Shortcode</a></li></ul>
+  <ul><li><a href="/zh-cn/posts/webnotes/learn_css/">学习CSS</a></li><li><a href="/zh-cn/posts/pythons/python_tips/">Python小贴士</a></li><li><a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a></li><li><a href="/zh-cn/posts/webnotes/learn_html/">学习HTML</a></li><li><a href="/zh-cn/posts/shortcodes/alert/">Alert Shortcode</a></li></ul>
 </section>
 <section class="taxonomy-categories row surface">
   <h4>
@@ -278,7 +307,7 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
   <div><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
       Shortcode <span class="badge rounded-pill">9</span>
     </a><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
-      学习笔记 <span class="badge rounded-pill">2</span>
+      学习笔记 <span class="badge rounded-pill">3</span>
     </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
       待办 <span class="badge rounded-pill">1</span>
     </a></div>
@@ -287,7 +316,7 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
     <a href="/zh-cn/series">专栏</a>
   </h4>
   <div><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="前端">
-      前端 <span class="badge rounded-pill">2</span>
+      前端 <span class="badge rounded-pill">3</span>
     </a><a href="/zh-cn/series/python/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="python">
       python <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="用户手册">
@@ -301,6 +330,8 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
       Alert <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/codepen/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CodePen">
       CodePen <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/css/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CSS">
+      CSS <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="dataclasses">
       dataclasses <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/html/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="HTML">
@@ -311,12 +342,10 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
       JSRun <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="namedtuple">
       namedtuple <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/threading/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="threading">
+      threading <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/youku/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Youku">
       Youku <span class="badge rounded-pill">1</span>
-    </a><a href="/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="哔哩哔哩">
-      哔哩哔哩 <span class="badge rounded-pill">1</span>
-    </a><a href="/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="爱奇艺">
-      爱奇艺 <span class="badge rounded-pill">1</span>
     </a></div>
 </section></div>
 </aside>
