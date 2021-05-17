@@ -171,7 +171,7 @@
 </nav>
   </div>
 </div><div class="post-content mb-3"><p>Python的一些使用技巧和有趣的库</p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="1-dataclasses"><strong>1. dataclasses</strong></h2>
 <blockquote>
 <p>python3.7引入的内置库，实现数据类，可以利用上内置的类型提示</p>
@@ -194,7 +194,7 @@ p1 <span style="color:#f92672">=</span> Person(<span style="color:#e6db74">&#39;
 </code></pre></div><p><strong>dict类型转为dataclass</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">p2 <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;zhangyan&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>: <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;sex&#39;</span>: <span style="color:#e6db74">&#39;female&#39;</span>}
 <span style="color:#66d9ef">print</span>(Person(<span style="color:#f92672">**</span>p2))  <span style="color:#75715e"># Person(name=&#39;zhangyan&#39;, age=25, sex=&#39;female&#39;)</span>
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br/>
 <h2 id="2-namedtuple"><strong>2. namedtuple</strong></h2>
 <blockquote>
 <p>给元组命名，元组中的每一项也可以命名；<br>
@@ -217,7 +217,7 @@ orange <span style="color:#f92672">=</span> Color<span style="color:#f92672">.</
 <span style="color:#66d9ef">print</span>(orange)
 <span style="color:#66d9ef">print</span>(orange<span style="color:#f92672">.</span>_asdict())  <span style="color:#75715e"># OrderedDict([(&#39;r&#39;, 224), (&#39;g&#39;, 142), (&#39;b&#39;, 0), (&#39;a&#39;, 1)])</span>
 <span style="color:#66d9ef">print</span>(tuple(orange))  <span style="color:#75715e"># (224, 142, 0, 1)</span>
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br/>
 <h2 id="3-threading"><strong>3. threading</strong></h2>
 <blockquote>
 <p>实现类似 JavaScript 中的 setimeout 延迟运行的效果</p>

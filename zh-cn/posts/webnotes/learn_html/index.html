@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="学习HTML">
 <meta itemprop="description" content="MDN文档的HTML学习笔记"><meta itemprop="datePublished" content="2021-05-05T20:45:33&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-05T20:45:33&#43;08:00" />
-<meta itemprop="wordCount" content="1960">
+<meta itemprop="wordCount" content="1969">
 <meta itemprop="keywords" content="HTML," /><meta property="og:title" content="学习HTML" />
 <meta property="og:description" content="MDN文档的HTML学习笔记" />
 <meta property="og:type" content="article" />
@@ -190,7 +190,7 @@
 </nav>
   </div>
 </div><div class="post-content mb-3"><p>MDN文档的HTML学习笔记</p>
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="1-嵌入"><strong>1. 嵌入</strong></h2>
 <h3 id="iframe-元素httpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingother_embedding_technologiesiframee8afa6e8a7a3"><strong><a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#iframe%E8%AF%A6%E8%A7%A3" target="_blank">&lt;iframe&gt; 元素</a>
 </strong></h3>
@@ -210,7 +210,7 @@
   <i class="fas fa-fw fa-bell"></i>插件是一种对浏览器原生无法读取的内容提供访问权限的软件
 </div>
 
-<!-- raw HTML omitted -->
+<br/>
 <h2 id="2-矢量图形svghttpsdevelopermozillaorgzh-cndocslearnhtmlmultimedia_and_embeddingadding_vector_graphics_to_the_webe5b086svge6b7bbe58aa0e588b0e9a1b5e99da2"><strong>2. <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web#%E5%B0%86svg%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%A1%B5%E9%9D%A2" target="_blank">矢量图形SVG</a>
 </strong></h2>
 <h3 id="快捷方式img"><strong>快捷方式：<code>&lt;img&gt;</code></strong></h3>
@@ -247,8 +247,16 @@
 <li>可能会在 <code>&lt;foreignObject&gt;</code> 元素中包含回退，但支持 SVG 的浏览器仍然会下载任何后备图像。考虑一下仅仅为支持过时的浏览器，而增加额外开销是否真的值得。</li>
 </ul>
 <h4 id="示例"><strong>示例</strong></h4>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<svg width="100%" height="150px">
+  <rect width="100%" height="150px" fill="hsl(0, 60%, 40%)" />
+  <circle cx="100%" cy="100%" r="200" fill="hsl(200, 60%, 40%)" />
+  <polygon points="86.6,0 173.2,150 0,150" fill="hsl(120, 40%, 40%)"/>
+  <text x="155" y="95" font-family="Verdana" font-size="55" fill="hsl(0, 0%, 100%, 80%)">
+    遁入智瞳！上勾拳！
+  </text>
+</svg>
+<br/>
+<br/>
 <h2 id="3-响应式图片"><strong>3. 响应式图片</strong></h2>
 <blockquote>
 <p>目的：学习如何使用 <code>srcset</code> 以及 <code>&lt;picture&gt;</code> 元素，来实现网页中的响应式图片处理方法。</p>
@@ -257,7 +265,7 @@
   <i class="fas fa-fw fa-bell"></i>新特性 srcset / sizes / &lt;picture&gt; —— 都已经被新版本的现代浏览器和移动浏览器支持。
 </div>
 
-<!-- raw HTML omitted -->
+<br/>
 <h3 id="分辨率切换不同的尺寸"><strong>分辨率切换：不同的尺寸</strong></h3>
 <p>两个新属性：<code>srcset</code> 和 <code>sizes</code> 提供额外的资源图像和提示。</p>
 <blockquote>
@@ -277,12 +285,21 @@
 </span><span style="color:#e6db74">              1280px&#34;</span>
      <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/posts/webnotes/learn_html/water-1280w.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Drink more water&#34;</span>&gt;
 </code></pre></div><p>效果：</p>
-<p><!-- raw HTML omitted --></p>
+<p><img srcset="/images/posts/webnotes/learn_html/water-320w.jpg 320w,
+/images/posts/webnotes/learn_html/water-480w.jpg 480w,
+/images/posts/webnotes/learn_html/water-800w.jpg 800w,
+/images/posts/webnotes/learn_html/water-1280w.jpg 1280w"
+sizes = "(max-width: 424px) 320px,
+(max-width: 767px) 460px,
+(max-width: 991px) 800px,
+1280px"
+src="/images/posts/webnotes/learn_html/water-1280w.jpg" alt="Drink more water"
+class="image"></p>
 <div class="alert alert-info" role="alert">
   <i class="fas fa-fw fa-info-circle"></i>总结：该方式会使浏览器根据设备屏幕大小下载合适的图片，来省流。
 </div>
 
-<!-- raw HTML omitted -->
+<br/>
 <h3 id="分辨率切换相同的尺寸不同的分辨率"><strong>分辨率切换：相同的尺寸，不同的分辨率</strong></h3>
 <p>如果想支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，使用 <code>srcset</code> 和 x 语法结合——一种更简单的语法——而不用 <code>sizes</code> ，来选择适当分辨率的图片。</p>
 <blockquote>
@@ -299,12 +316,18 @@
      <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/posts/webnotes/learn_html/mercy-1280w.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Overwatch mercy&#34;</span>
      <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 180px;&#34;</span>&gt;
 </code></pre></div><p>效果：</p>
-<p><!-- raw HTML omitted --></p>
+<p><img srcset="/images/posts/webnotes/learn_html/mercy-320w.png,
+/images/posts/webnotes/learn_html/mercy-480w.png 1.5x,
+/images/posts/webnotes/learn_html/mercy-800w.png 2.5x,
+/images/posts/webnotes/learn_html/mercy-1280w.png 4x"
+src="/images/posts/webnotes/learn_html/mercy-1280w.png" alt="Overwatch mercy"
+class="image"
+style="width: 180px;"></p>
 <div class="alert alert-info" role="alert">
   <i class="fas fa-fw fa-info-circle"></i>总结：该方式会使浏览器根据设备屏幕像素密度来决定使用哪个版本的图片，并根据 `width` 的值保证图片在所有设备上实际大小一致。
 </div>
 
-<!-- raw HTML omitted -->
+<br/>
 <h3 id="美术设计"><strong>美术设计</strong></h3>
 <blockquote>
 <p>使用 <code>&lt;picture&gt;</code> 元素实现当屏幕缩小时动态得使用对应像素的图片，将内容适应小屏幕观看，例如人物更大的低分辨率图片。</p>
@@ -321,15 +344,23 @@
   &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/images/posts/webnotes/learn_html/mercy-1280w.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Overwatch mercy&#34;</span>&gt;
 &lt;/<span style="color:#f92672">picture</span>&gt;
 </code></pre></div><p>效果（调整浏览器宽度以查看变化）：</p>
-<!-- raw HTML omitted -->
+<p>
+  <picture>
+    <source media="(max-width: 424px)" srcset="/images/posts/webnotes/learn_html/mercy-320w.png">
+    <source media="(max-width: 767px)" srcset="/images/posts/webnotes/learn_html/mercy-480w.png">
+    <source media="(max-width: 991px)" srcset="/images/posts/webnotes/learn_html/mercy-800w.png">
+    <source srcset="/images/posts/webnotes/learn_html/mercy-1280w.png">
+    <img src="/images/posts/webnotes/learn_html/mercy-1280w.jpg" alt="Overwatch mercy" class="image">
+  </picture>
+</p>
 <div class="alert alert-note" role="alert">
   <i class="fas fa-fw fa-bell"></i>应该仅仅在美术设计场景下使用media属性；当使用media时，不要在sizes属性中也提供媒体条件。
 </div>
 
-<!-- raw HTML omitted -->
+<br/>
 <h3 id="为什么不能使用-css-或-javascript-来做到这一效果"><strong>为什么不能使用 CSS 或 JavaScript 来做到这一效果？</strong></h3>
 <p>如果使用CSS或JavaScript来实现这一效果，在这之前原始图像已经被加载了，然后CSS或JavaScript又加载了一个小的图像，反而浪费发了流量。</p>
-<!-- raw HTML omitted -->
+<br/>
 <h3 id="大胆使用现代图像格式"><strong>大胆使用现代图像格式</strong></h3>
 <p>新图像格式（例如 WebP 和 JPEG-2000）可以在有高质量的同时有较低的文件大小。但是浏览器支持情况不同。</p>
 <p>可以使用 <code>&lt;picture&gt;</code> 来继续满足老式浏览器的需要。可以在 <code>type</code> 属性中提供 MIME 类型，这样浏览器就能立即拒绝不支持的类型：</p>
