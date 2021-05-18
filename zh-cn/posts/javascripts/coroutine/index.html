@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="JavaScript中的协程与生产者消费者模式">
 <meta itemprop="description" content="Javascript中的协程以及实现生产者消费者模式"><meta itemprop="datePublished" content="2021-05-18T08:34:54&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-18T08:34:54&#43;08:00" />
-<meta itemprop="wordCount" content="38"><meta itemprop="image" content="/images/posts/javascripts/coroutine/cover.png">
+<meta itemprop="wordCount" content="589"><meta itemprop="image" content="/images/posts/javascripts/coroutine/cover.png">
 <meta itemprop="keywords" content="JavaScript,生产者消费者模式,协程," /><meta property="og:title" content="JavaScript中的协程与生产者消费者模式" />
 <meta property="og:description" content="Javascript中的协程以及实现生产者消费者模式" />
 <meta property="og:type" content="article" />
@@ -150,14 +150,92 @@
     <i class="fas fa-fw fa-calendar-alt"></i>2021-05-18
   </span>
   <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
   </span>
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/javascript/" class="post-taxonomy">#JavaScript</a><a href="/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/" class="post-taxonomy">#生产者消费者模式</a><a href="/zh-cn/tags/%E5%8D%8F%E7%A8%8B/" class="post-taxonomy">#协程</a></div>
 <div class="post-content mb-3"><p>Javascript中的协程以及实现生产者消费者模式</p>
 <div class="post-img">
   <img src="/images/posts/javascripts/coroutine/head.png" alt="插图"> 
   <div class="post-img-caption">生产者消费者模式输出示例</div>
-</div></div><div class="post-copyright mb-4">
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Apple</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    <span style="color:#a6e22e">constructor</span>() {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;红富士&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;邯郸&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">taste</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;甜&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Apple</span>.<span style="color:#a6e22e">price</span>;
+    }
+    <span style="color:#a6e22e">toString</span>() {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`[</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">Apple</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">] {type: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, loc: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">location</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, taste: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">taste</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, price: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">price</span><span style="color:#e6db74">}</span><span style="color:#e6db74">}`</span>;
+    }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Penapple</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">817</span>;
+    <span style="color:#a6e22e">constructor</span>() {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;呆湾凤梨&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;呆湾&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">taste</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;酸&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Penapple</span>.<span style="color:#a6e22e">price</span>;
+    }
+    <span style="color:#a6e22e">toString</span>() {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`[</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">Penapple</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">] {type: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">type</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, loc: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">location</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, taste: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">taste</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, price: </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">price</span><span style="color:#e6db74">}</span><span style="color:#e6db74">}`</span>;
+    }
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">produce</span> (<span style="color:#a6e22e">Goods</span>) {
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">make</span> (<span style="color:#a6e22e">cName</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">delay</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>) {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`[生产者] 正给</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">生产第</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">i</span><span style="color:#e6db74">}</span><span style="color:#e6db74">个</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">Goods</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">...，预计需要</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">delay</span><span style="color:#e6db74">}</span><span style="color:#e6db74">ms`</span>);
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; {
+            <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+                <span style="color:#a6e22e">resolve</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Goods</span>());
+            }, <span style="color:#a6e22e">delay</span>);
+        });
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">num</span>, <span style="color:#a6e22e">delay</span>) {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">next</span>().<span style="color:#a6e22e">value</span>;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">num</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">freshGoods</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">make</span>(<span style="color:#a6e22e">cName</span>, <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">delay</span>);
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cRes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">next</span>(<span style="color:#a6e22e">freshGoods</span>).<span style="color:#a6e22e">value</span>;
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`[消费者反馈] </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cRes</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        }
+    }
+}
+
+<span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">consumer</span> (<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span>;
+    <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">true</span>) {
+        <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">r</span>;
+        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">n</span>) {
+            <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;没给我东西啊！&#39;</span>;
+            <span style="color:#66d9ef">continue</span>;
+        }
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`[消费者 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">] 正买 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">n</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        <span style="color:#a6e22e">r</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`我是</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">，我买完了`</span>;
+    }
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fruitFactory</span> (<span style="color:#a6e22e">fruit</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruitMap</span> <span style="color:#f92672">=</span> {
+        <span style="color:#e6db74">&#39;apple&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Apple</span>,
+        <span style="color:#e6db74">&#39;penapple&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Penapple</span>,
+    };
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">fruit</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">fruitMap</span>)) <span style="color:#66d9ef">throw</span> <span style="color:#e6db74">`这个工厂不能生产 </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fruit</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">produce</span>(<span style="color:#a6e22e">fruitMap</span>[<span style="color:#a6e22e">fruit</span>]);
+}
+
+(<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">appleProducer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fruitFactory</span>(<span style="color:#e6db74">&#39;apple&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">penappleProducer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fruitFactory</span>(<span style="color:#e6db74">&#39;penapple&#39;</span>);
+    
+    <span style="color:#a6e22e">appleProducer</span>(<span style="color:#a6e22e">consumer</span>(<span style="color:#e6db74">&#39;魏鑫&#39;</span>), <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5000</span>);
+    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">penappleProducer</span>(<span style="color:#a6e22e">consumer</span>(<span style="color:#e6db74">&#39;张艳&#39;</span>), <span style="color:#ae81ff">5</span>);
+    <span style="color:#a6e22e">Penapple</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">250</span>;
+    <span style="color:#a6e22e">penappleProducer</span>(<span style="color:#a6e22e">consumer</span>(<span style="color:#e6db74">&#39;魏鑫&#39;</span>), <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2000</span>);
+})();
+</code></pre></div></div><div class="post-copyright mb-4">
   <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
 </div><div class="post-reward mb-4 text-center">
   <button type="button" class="btn btn-reward" data-bs-toggle="modal" data-bs-target="#rewardModal">
