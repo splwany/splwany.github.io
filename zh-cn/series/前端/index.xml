@@ -6,7 +6,16 @@
     <description>Recent content in 前端 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 16 May 2021 16:11:51 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 08:34:54 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript中的协程与生产者消费者模式</title>
+      <link>/zh-cn/posts/javascripts/coroutine/</link>
+      <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/coroutine/</guid>
+      <description>&lt;p&gt;Javascript中的协程以及实现生产者消费者模式&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>学习CSS</title>
       <link>/zh-cn/posts/webnotes/learn_css/</link>
