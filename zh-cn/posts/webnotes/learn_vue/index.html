@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学习VUE - 在下傲娇的泰迪</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="description" content="" /><meta itemprop="name" content="学习VUE">
+<meta itemprop="description" content="开课吧VUE体验课笔记"><meta itemprop="datePublished" content="2021-05-20T22:19:53&#43;08:00" />
+<meta itemprop="dateModified" content="2021-05-20T22:19:53&#43;08:00" />
+<meta itemprop="wordCount" content="1075">
+<meta itemprop="keywords" content="VUE," /><meta property="og:title" content="学习VUE" />
+<meta property="og:description" content="开课吧VUE体验课笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/zh-cn/posts/webnotes/learn_vue/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-20T22:19:53&#43;08:00" />
+<meta property="article:modified_time" content="2021-05-20T22:19:53&#43;08:00" /><meta property="og:site_name" content="在下傲娇的泰迪" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="学习VUE"/>
+<meta name="twitter:description" content="开课吧VUE体验课笔记"/>
+<meta name="twitter:site" content="@splwany"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.97335f0cf3f940376c6eec6badc4df62a97f49d84aabee004d2ed6597c382a1c.css" integrity="sha256-lzNfDPP5QDdsbuxrrcTfYql/SdhKq&#43;4ATS7WWXw4Khw=" crossorigin="anonymous"><script src="/js/bundle.min.3367f45551af6a5a84ad78de8f9df6cba14f9b8ee46cf7a3d23d1194465c5910.js" integrity="sha256-M2f0VVGvalqErXjej532y6FPm47kbPej0j0RlEZcWRA=" crossorigin="anonymous"></script>
+</head><body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/zh-cn/">
+      <img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy">傲娇的泰迪の博客</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0"><form class="search-bar d-flex ms-1" action="/zh-cn/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/posts">
+            <i class="fas fa-fw fa-file-alt"></i>文章
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/zh-cn/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            更多
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-dropdown"><li>
+              <a class="dropdown-item"
+                href="https://github.com/splwany/splwany.github.io" target="_blank">
+                <i class="fab fa-fw fa-github"></i>Github
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://space.bilibili.com/6936496" target="_blank">
+                <i class="fab fa-fw iconfont icon-bilibili"></i>哔哩哔哩
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="languageSwitcher" data-bs-toggle="popover"
+    data-bs-placement="bottom" data-bs-target="#languagesPopoverBody" data-bs-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item"><a href="/zh-tw/">繁體中文</a></li><li class="language list-group-item"><a href="/en/">English</a></li></ul>
+</script><li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="paletteSwitcher" data-bs-toggle="popover" data-bs-placement="bottom" 
+    data-bs-target="#palettesPopoverBody" data-bs-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+<li class="nav-item me-1">
+  <a class="nav-link" tabindex="0" data-bs-trigger="click" id="fontSizeSwitcher" data-bs-toggle="popover" data-bs-placement="bottom" 
+    data-bs-target="#fontSizesPopoverBody" data-bs-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/">文章</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/webnotes/">Web笔记</a></li><li class="breadcrumb-item active">学习VUE</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">学习VUE</h1><div class="post-meta mb-3">
+  <span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-20
+  </span>
+  <span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
+  </span>
+<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/vue/" class="post-taxonomy">#VUE</a></div>
+<a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#day-01">day 01</a></li>
+    <li><a href="#day-02">day 02</a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>开课吧VUE体验课笔记</p>
+<br/>
+<h2 id="day-01">day 01</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h3</span>&gt;{{title}}&lt;/<span style="color:#f92672">h3</span>&gt;
+    &lt;<span style="color:#f92672">h3</span>&gt;{{state.title}}&lt;/<span style="color:#f92672">h3</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 接收obj，代理它，使他成为响应式的
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 替换Object.defineProperty()
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">reactive</span>(<span style="color:#a6e22e">obj</span>) {
+        <span style="color:#75715e">// vue3中基于Proxy
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">obj</span>, {
+            <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>) {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;get&#39;</span>, <span style="color:#a6e22e">key</span>)
+                <span style="color:#75715e">// 依赖收集
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">track</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>)
+
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">key</span>]
+            },
+            <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span>) {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;set&#39;</span>, <span style="color:#a6e22e">key</span>)
+                <span style="color:#a6e22e">target</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">val</span>
+                <span style="color:#75715e">// update()
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// app.update()
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// 触发依赖
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">trigger</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>)
+            },
+        })
+    }
+
+    <span style="color:#75715e">// 添加副作用函数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">effectStack</span> <span style="color:#f92672">=</span> []  <span style="color:#75715e">// 临时存储fn
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">effect</span>(<span style="color:#a6e22e">fn</span>) {
+        <span style="color:#75715e">// 如果fn中用到了响应式数据，当他们发生变化，fn会再次执行，称为副作用函数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">eff</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+            <span style="color:#66d9ef">try</span> {
+                <span style="color:#a6e22e">effectStack</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">eff</span>)
+                <span style="color:#a6e22e">fn</span>()
+            } <span style="color:#66d9ef">finally</span> {
+                <span style="color:#a6e22e">effectStack</span>.<span style="color:#a6e22e">pop</span>()
+            }
+        }
+
+        <span style="color:#75715e">// 执行一次，出发依赖收集
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">eff</span>()
+
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">eff</span>
+    }
+
+    <span style="color:#75715e">// 依赖收集函数track
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// {target: {key: [eff]}}
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">targetMap</span> <span style="color:#f92672">=</span> {}
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">track</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>) {
+        <span style="color:#75715e">// 获取副作用函数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">effect</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">effectStack</span>[<span style="color:#a6e22e">effectStack</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">effect</span>) {
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">targetMap</span>[<span style="color:#a6e22e">target</span>]
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">map</span>) {
+                <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">targetMap</span>[<span style="color:#a6e22e">target</span>] <span style="color:#f92672">=</span> {}
+            }
+
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">deps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>[<span style="color:#a6e22e">key</span>]
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">deps</span>) {
+                <span style="color:#a6e22e">deps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> []
+            }
+
+            <span style="color:#75715e">// 将副作用函数放入deps
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">deps</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">effect</span>) <span style="color:#f92672">===</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+                <span style="color:#a6e22e">deps</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">effect</span>)
+            }
+        }
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">trigger</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>) {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">targetMap</span>[<span style="color:#a6e22e">target</span>]
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">map</span>) {
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">deps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>[<span style="color:#a6e22e">key</span>]
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">deps</span>) {
+                <span style="color:#a6e22e">deps</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">dep</span> =&gt; <span style="color:#a6e22e">dep</span>())
+            }
+        }
+    }
+
+    <span style="color:#75715e">// createApp返回应用程序实例是什么样子
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Vue</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">options</span>) {
+            <span style="color:#75715e">// 暴露给浏览器平台
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">renderer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">createRenderer</span>({
+                <span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">selector</span>) {
+                    <span style="color:#66d9ef">return</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">selector</span>)
+                },
+                <span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">child</span>, <span style="color:#a6e22e">parent</span>, <span style="color:#a6e22e">anchor</span>) {
+                    <span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">child</span>, <span style="color:#a6e22e">anchor</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">null</span>)
+                }
+            })
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">renderer</span>.<span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">options</span>)
+        },
+        <span style="color:#a6e22e">createRenderer</span>({ <span style="color:#a6e22e">querySelector</span>, <span style="color:#a6e22e">insert</span> }) {
+            <span style="color:#75715e">// 返回自定义的渲染器
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">options</span>) {
+                    <span style="color:#75715e">// 返回的就是app实例
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">return</span> {
+                        <span style="color:#a6e22e">mount</span>(<span style="color:#a6e22e">selector</span>) {
+                            <span style="color:#75715e">// mount的目标是什么？
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">querySelector</span>(<span style="color:#a6e22e">selector</span>)
+                           
+                            <span style="color:#75715e">// 需要将组件配置解析为dom
+</span><span style="color:#75715e"></span>                            <span style="color:#75715e">//通过render函数实现
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">render</span>) {
+                                <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">render</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">compile</span>(<span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">innerHTML</span>)
+                            }
+        
+                            <span style="color:#75715e">// 兼容options api
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">setup</span>) {
+                                <span style="color:#75715e">// setupState已经是一个代理对象
+</span><span style="color:#75715e"></span>                                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setupState</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">setup</span>()
+                            } <span style="color:#66d9ef">else</span> {
+                                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">data</span>()
+                            }
+                            
+                            <span style="color:#75715e">// Proxy
+</span><span style="color:#75715e"></span>                            <span style="color:#75715e">// 确定render中数据从哪获取
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">proxy</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#66d9ef">this</span>, {
+                                <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>) {
+                                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">setupState</span>) {
+                                        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">setupState</span>[<span style="color:#a6e22e">key</span>]
+                                    } <span style="color:#66d9ef">else</span> {
+                                        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">data</span>[<span style="color:#a6e22e">key</span>]
+                                    }
+                                },
+                                <span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">val</span>) {
+                                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">setupState</span>) {
+                                        <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">setupState</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">val</span>
+                                    } <span style="color:#66d9ef">else</span> {
+                                        <span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">data</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">val</span>
+                                    }
+                                }
+                            })
+
+                            <span style="color:#75715e">// app实例上加了一个更新函数
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">update</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">effect</span>(() =&gt; {
+                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">render</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">proxy</span>)
+            
+                                <span style="color:#75715e">// 追加到宿主元素上去
+</span><span style="color:#75715e"></span>                                <span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+                                <span style="color:#75715e">// parent.appendChild(el)
+</span><span style="color:#75715e"></span>                                <span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">parent</span>)
+                            })
+                            
+                            <span style="color:#75715e">// 初始化
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">update</span>()
+                        },
+                        <span style="color:#a6e22e">compile</span>(<span style="color:#a6e22e">template</span>) {
+                            <span style="color:#75715e">// 没有用到template
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">render</span>() {
+                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">h3</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;h3&#39;</span>)
+                                <span style="color:#a6e22e">h3</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span>
+                                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h3</span>
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 1. 函数式
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 2. 标准化、简化、一致性:render函数，sync修饰符删除，指令定义，v-model调整
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 3. tree-shaking（摇树优化）
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 4. 复用性：composition api
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 5. 性能优化：响应式、编译期优化
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 6. 扩展性：自定义渲染器
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">createApp</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vue</span>
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createApp</span>({
+        <span style="color:#a6e22e">data</span>() {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hello vue3!&#39;</span>
+            }
+        },
+        <span style="color:#a6e22e">setup</span>() {
+            <span style="color:#75715e">// 调函数等等
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 规避this
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reactive</span>({
+                <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hello vue3!!!!!!&#39;</span>
+            })
+            <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+                <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;vue3, hello!!!!!!&#39;</span>
+            }, <span style="color:#ae81ff">2000</span>)
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>
+        },
+    })
+    <span style="color:#75715e">// app.component()
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// app.directive(&#39;focus&#39;, {})
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>)
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="day-02">day 02</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h3</span>&gt;{{state.title}}&lt;/<span style="color:#f92672">h3</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;counter: {{state2.counter}}&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/vue@next&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 1. 函数式
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 2. 标准化、简化、一致性:render函数，sync修饰符删除，指令定义，v-model调整
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 3. tree-shaking（摇树优化）
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 4. 复用性：composition api
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 5. 性能优化：响应式、编译期优化
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 6. 扩展性：自定义渲染器
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">createApp</span>, <span style="color:#a6e22e">reactive</span>, <span style="color:#a6e22e">onMounted</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vue</span>
+
+    <span style="color:#75715e">// 复用性
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">useTitle</span>() {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reactive</span>({
+            <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hello vue3!!!!!&#39;</span>
+        })
+
+        <span style="color:#a6e22e">onMounted</span>(() =&gt; {
+            <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;vue3, hello!!!&#39;</span>
+        })
+
+        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+            <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;title 2s&#39;</span>
+        }, <span style="color:#ae81ff">2000</span>)
+        
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">useCounter</span>() {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reactive</span>({
+            <span style="color:#a6e22e">counter</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
+        })
+        <span style="color:#a6e22e">onMounted</span>(() =&gt; {
+            <span style="color:#a6e22e">state2</span>.<span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        })
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state2</span>
+    }
+
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createApp</span>({
+        <span style="color:#a6e22e">setup</span>() {
+            <span style="color:#75715e">// title
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useTitle</span>()
+
+            <span style="color:#75715e">// counter
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCounter</span>()
+
+            <span style="color:#75715e">// 上下文给render使用
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> {
+                <span style="color:#a6e22e">state</span>,
+                <span style="color:#a6e22e">state2</span>
+            }
+        },
+    })
+    <span style="color:#75715e">// app.component()
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// app.directive(&#39;focus&#39;, {})
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>)
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-bs-toggle="modal" data-bs-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.jpg" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/zh-cn/posts/javascripts/coroutine/">JavaScript中的协程与生产者消费者模式</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"></div>
+</div></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="splwany/splwany.github.io"
+  issue-term="pathname"
+  label="comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="/images/profile.webp" alt="Alan Wei" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/zh-cn/posts/webnotes/learn_vue/">学习VUE</a></li><li><a href="/zh-cn/posts/javascripts/coroutine/">JavaScript中的协程与生产者消费者模式</a></li><li><a href="/zh-cn/posts/webnotes/learn_css/">学习CSS</a></li><li><a href="/zh-cn/posts/pythons/python_tips/">Python小贴士</a></li><li><a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/zh-cn/categories">分类</a>
+  </h4>
+  <div><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
+      Shortcode <span class="badge rounded-pill">9</span>
+    </a><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
+      学习笔记 <span class="badge rounded-pill">5</span>
+    </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
+      待办 <span class="badge rounded-pill">1</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/zh-cn/series">专栏</a>
+  </h4>
+  <div><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="前端">
+      前端 <span class="badge rounded-pill">5</span>
+    </a><a href="/zh-cn/series/python/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="python">
+      python <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="用户手册">
+      用户手册 <span class="badge rounded-pill">1</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/zh-cn/tags">标签</a>
+  </h4>
+  <div><a href="/zh-cn/tags/alert/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Alert">
+      Alert <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/codepen/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CodePen">
+      CodePen <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/css/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CSS">
+      CSS <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="dataclasses">
+      dataclasses <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/html/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="HTML">
+      HTML <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/javascript/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JavaScript">
+      JavaScript <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/jsfiddle/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JSFiddle">
+      JSFiddle <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/jsrun/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JSRun">
+      JSRun <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="namedtuple">
+      namedtuple <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/threading/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="threading">
+      threading <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/vue/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="VUE">
+      VUE <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/youku/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Youku">
+      Youku <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E5%8D%8F%E7%A8%8B/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="协程">
+      协程 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="哔哩哔哩">
+      哔哩哔哩 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="爱奇艺">
+      爱奇艺 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="生产者消费者模式">
+      生产者消费者模式 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="网易云音乐">
+      网易云音乐 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="腾讯视频">
+      腾讯视频 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="面试问题">
+      面试问题 <span class="badge rounded-pill">1</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:zhenzidanspl@163.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://facebook.com/100008192920152" title="Facebook">
+        <i class="fab fa-fw fa-2x fa-facebook-f"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/splwany" title="GitHub">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.instagram.com/splwany" title="Instagram">
+        <i class="fab fa-fw fa-2x fa-instagram"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.last.fm/user/splwany" title="Last.fm">
+        <i class="fab fa-fw fa-2x fa-lastfm"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://space.bilibili.com/6936496" title="Medium">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.quora.com/profile/Splwany-Wei" title="Quora">
+        <i class="fab fa-fw fa-2x fa-quora"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.reddit.com/user/splwany925" title="Reddit">
+        <i class="fab fa-fw fa-2x fa-reddit"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://twitter.com/splwany" title="Twitter">
+        <i class="fab fa-fw fa-2x fa-twitter"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://weibo.com/2341895933" title="Weibo">
+        <i class="fab fa-fw fa-2x fa-weibo"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/wei-xin-13-16" title="Zhihu">
+        <i class="fab fa-fw fa-2x fa-zhihu"></i>
+      </a>
+    </li></nav>
+<div class="copyright mb-2">
+  Copyright © 2020-2021 Alan Wei. All Rights Reserved.
+</div>
+</footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>
