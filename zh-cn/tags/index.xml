@@ -6,22 +6,67 @@
     <description>Recent content in 标签 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 20 May 2021 22:19:53 +0800</lastBuildDate><atom:link href="/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 May 2021 10:34:34 +0800</lastBuildDate><atom:link href="/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>VUE</title>
-      <link>/zh-cn/tags/vue/</link>
-      <pubDate>Thu, 20 May 2021 22:19:53 +0800</pubDate>
+      <title>ES5</title>
+      <link>/zh-cn/tags/es5/</link>
+      <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/vue/</guid>
+      <guid>/zh-cn/tags/es5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ES6</title>
+      <link>/zh-cn/tags/es6/</link>
+      <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
+      
+      <guid>/zh-cn/tags/es6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript</title>
       <link>/zh-cn/tags/javascript/</link>
-      <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
+      <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
       <guid>/zh-cn/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prototype</title>
+      <link>/zh-cn/tags/prototype/</link>
+      <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
+      
+      <guid>/zh-cn/tags/prototype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>原型链</title>
+      <link>/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
+      <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
+      
+      <guid>/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>继承</title>
+      <link>/zh-cn/tags/%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
+      
+      <guid>/zh-cn/tags/%E7%BB%A7%E6%89%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VUE</title>
+      <link>/zh-cn/tags/vue/</link>
+      <pubDate>Thu, 20 May 2021 22:19:53 +0800</pubDate>
+      
+      <guid>/zh-cn/tags/vue/</guid>
       <description></description>
     </item>
     
@@ -58,6 +103,15 @@
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
       <guid>/zh-cn/tags/dataclasses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>/zh-cn/tags/logging/</link>
+      <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
+      
+      <guid>/zh-cn/tags/logging/</guid>
       <description></description>
     </item>
     

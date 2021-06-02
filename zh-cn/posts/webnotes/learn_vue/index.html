@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="学习VUE">
 <meta itemprop="description" content="开课吧VUE体验课笔记"><meta itemprop="datePublished" content="2021-05-20T22:19:53&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-20T22:19:53&#43;08:00" />
-<meta itemprop="wordCount" content="1075">
+<meta itemprop="wordCount" content="1093">
 <meta itemprop="keywords" content="VUE," /><meta property="og:title" content="学习VUE" />
 <meta property="og:description" content="开课吧VUE体验课笔记" />
 <meta property="og:type" content="article" />
@@ -151,27 +151,8 @@
     <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
   </span>
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/vue/" class="post-taxonomy">#VUE</a></div>
-<a id="btnTOC" class="fas fa-fw fa-2x fa-list-alt position-fixed" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
-</a>
-
-<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
-    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
-      <span class="fas fa-2x fa-fw fa-times"></span>
-    </a>
-  </div>
-  <div class="offcanvas-body">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#day-01">day 01</a></li>
-    <li><a href="#day-02">day 02</a></li>
-  </ul>
-</nav>
-  </div>
-</div><div class="post-content mb-3"><p>开课吧VUE体验课笔记</p>
+<div class="post-content mb-3"><p>开课吧VUE体验课笔记</p>
 <br/>
-<h2 id="day-01">day 01</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
     &lt;<span style="color:#f92672">h3</span>&gt;{{title}}&lt;/<span style="color:#f92672">h3</span>&gt;
     &lt;<span style="color:#f92672">h3</span>&gt;{{state.title}}&lt;/<span style="color:#f92672">h3</span>&gt;
@@ -254,6 +235,10 @@
         }
     }
 
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">h</span>(<span style="color:#a6e22e">tag</span>, <span style="color:#a6e22e">props</span>, <span style="color:#a6e22e">children</span>) {
+        <span style="color:#66d9ef">return</span> {<span style="color:#a6e22e">tag</span>, <span style="color:#a6e22e">props</span>, <span style="color:#a6e22e">children</span>}
+    }
+
     <span style="color:#75715e">// createApp返回应用程序实例是什么样子
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Vue</span> <span style="color:#f92672">=</span> {
         <span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">options</span>) {
@@ -264,11 +249,14 @@
                 },
                 <span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">child</span>, <span style="color:#a6e22e">parent</span>, <span style="color:#a6e22e">anchor</span>) {
                     <span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">insertBefore</span>(<span style="color:#a6e22e">child</span>, <span style="color:#a6e22e">anchor</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">null</span>)
+                },
+                <span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">tag</span>) {
+                    <span style="color:#66d9ef">return</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">tag</span>)
                 }
             })
             <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">renderer</span>.<span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">options</span>)
         },
-        <span style="color:#a6e22e">createRenderer</span>({ <span style="color:#a6e22e">querySelector</span>, <span style="color:#a6e22e">insert</span> }) {
+        <span style="color:#a6e22e">createRenderer</span>({ <span style="color:#a6e22e">querySelector</span>, <span style="color:#a6e22e">insert</span>, <span style="color:#a6e22e">createElement</span> }) {
             <span style="color:#75715e">// 返回自定义的渲染器
 </span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> {
                 <span style="color:#a6e22e">createApp</span>(<span style="color:#a6e22e">options</span>) {
@@ -313,24 +301,98 @@
 
                             <span style="color:#75715e">// app实例上加了一个更新函数
 </span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">update</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">effect</span>(() =&gt; {
-                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">render</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">proxy</span>)
-            
-                                <span style="color:#75715e">// 追加到宿主元素上去
-</span><span style="color:#75715e"></span>                                <span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
-                                <span style="color:#75715e">// parent.appendChild(el)
-</span><span style="color:#75715e"></span>                                <span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">parent</span>)
+                                <span style="color:#75715e">// const el = options.render.call(this.proxy)
+</span><span style="color:#75715e"></span>
+                                <span style="color:#75715e">// // 追加到宿主元素上去
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// parent.innerHTML = &#39;&#39;
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// // parent.appendChild(el)
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// insert(el, parent)
+</span><span style="color:#75715e"></span>
+                                <span style="color:#75715e">// 获取虚拟dom
+</span><span style="color:#75715e"></span>                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">vnode</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">render</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">proxy</span>)
+                                <span style="color:#75715e">// mounted
+</span><span style="color:#75715e"></span>                                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isMounted</span>) {
+                                    <span style="color:#75715e">// mounted
+</span><span style="color:#75715e"></span>                                    <span style="color:#75715e">// vnode =&gt; dom
+</span><span style="color:#75715e"></span>                                    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">createElm</span>(<span style="color:#a6e22e">vnode</span>)
+                                    <span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+                                    <span style="color:#a6e22e">insert</span>(<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">parent</span>)
+
+                                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">isMounted</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+                                } <span style="color:#66d9ef">else</span> {
+                                    <span style="color:#75715e">// update
+</span><span style="color:#75715e"></span>                                    <span style="color:#75715e">// diff
+</span><span style="color:#75715e"></span>                                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">patch</span>(<span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">vnode</span>, <span style="color:#a6e22e">vnode</span>)
+                                }
+
+                                <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">vnode</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vnode</span>
                             })
                             
                             <span style="color:#75715e">// 初始化
 </span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">update</span>()
                         },
+                        <span style="color:#a6e22e">createElm</span>(<span style="color:#a6e22e">vnode</span>) {
+                            <span style="color:#75715e">// 创建根节点
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createElement</span>(<span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">tag</span>)
+                            <span style="color:#75715e">// todo props
+</span><span style="color:#75715e"></span>                            <span style="color:#75715e">// children
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;string&#39;</span>) {
+                                <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>
+                            } <span style="color:#66d9ef">else</span> {
+                                <span style="color:#75715e">// 递归
+</span><span style="color:#75715e"></span>                                <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">children</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">child</span> =&gt; {
+                                    <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">createElm</span>(<span style="color:#a6e22e">child</span>), <span style="color:#a6e22e">el</span>)
+                                })
+                            }
+                            <span style="color:#a6e22e">vnode</span>.<span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">el</span>
+                            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">el</span>
+                        },
+                        <span style="color:#75715e">// n1: 老节点
+</span><span style="color:#75715e"></span>                        <span style="color:#75715e">// n2: 新节点
+</span><span style="color:#75715e"></span>                        <span style="color:#a6e22e">patch</span>(<span style="color:#a6e22e">n1</span>, <span style="color:#a6e22e">n2</span>) {
+                            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n2</span>.<span style="color:#a6e22e">el</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n1</span>.<span style="color:#a6e22e">el</span>
+                            <span style="color:#75715e">// 判断双方是否是相同节点
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">n1</span>.<span style="color:#a6e22e">tag</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">n2</span>.<span style="color:#a6e22e">tag</span>) {
+                                <span style="color:#75715e">// tots props
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// children
+</span><span style="color:#75715e"></span>                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">oldCh</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n1</span>.<span style="color:#a6e22e">children</span>
+                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newCh</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">n2</span>.<span style="color:#a6e22e">children</span>
+
+                                <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">oldCh</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;string&#39;</span>) {
+                                    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">newCh</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;string&#39;</span>) {
+                                        <span style="color:#75715e">// text
+</span><span style="color:#75715e"></span>                                        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">oldCh</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">newCh</span>) {
+                                            <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newCh</span>
+                                        }
+                                    } <span style="color:#66d9ef">else</span> {
+                                        <span style="color:#75715e">// replace text with elements
+</span><span style="color:#75715e"></span>                                        <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+                                        <span style="color:#a6e22e">newCh</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">child</span> =&gt; <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">createElm</span>(<span style="color:#a6e22e">child</span>), <span style="color:#a6e22e">el</span>))
+                                    }
+                                } <span style="color:#66d9ef">else</span> {
+                                    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">newCh</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;string&#39;</span>) {
+                                        <span style="color:#75715e">// replace elements with text
+</span><span style="color:#75715e"></span>                                        <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newCh</span>
+                                    } <span style="color:#66d9ef">else</span> {
+                                        <span style="color:#75715e">// children
+</span><span style="color:#75715e"></span>                                        
+                                    }
+                                }
+                            }
+                        },
                         <span style="color:#a6e22e">compile</span>(<span style="color:#a6e22e">template</span>) {
                             <span style="color:#75715e">// 没有用到template
 </span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">render</span>() {
-                                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">h3</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;h3&#39;</span>)
-                                <span style="color:#a6e22e">h3</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span>
-                                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h3</span>
-                            }
+                                <span style="color:#75715e">// const h3 = document.createElement(&#39;h3&#39;)
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// h3.textContent = this.title
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// return h3
+</span><span style="color:#75715e"></span>
+                                <span style="color:#75715e">// 返回vnode
+</span><span style="color:#75715e"></span>                                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">h</span>(<span style="color:#e6db74">&#39;h3&#39;</span>, <span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">title</span>)
+                                <span style="color:#75715e">// return h(&#39;h3&#39;, null, [
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">//     h(&#39;p&#39;, null, this.title),
+</span><span style="color:#75715e"></span>                                <span style="color:#75715e">// ])
+</span><span style="color:#75715e"></span>                            }
                         }
                     }
                 }
@@ -362,69 +424,6 @@
                 <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;vue3, hello!!!!!!&#39;</span>
             }, <span style="color:#ae81ff">2000</span>)
             <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>
-        },
-    })
-    <span style="color:#75715e">// app.component()
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// app.directive(&#39;focus&#39;, {})
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>)
-&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><h2 id="day-02">day 02</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
-    &lt;<span style="color:#f92672">h3</span>&gt;{{state.title}}&lt;/<span style="color:#f92672">h3</span>&gt;
-    &lt;<span style="color:#f92672">p</span>&gt;counter: {{state2.counter}}&lt;/<span style="color:#f92672">p</span>&gt;
-&lt;/<span style="color:#f92672">div</span>&gt;
-
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/vue@next&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span>&gt;
-    <span style="color:#75715e">// 1. 函数式
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 2. 标准化、简化、一致性:render函数，sync修饰符删除，指令定义，v-model调整
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 3. tree-shaking（摇树优化）
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 4. 复用性：composition api
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 5. 性能优化：响应式、编译期优化
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 6. 扩展性：自定义渲染器
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">createApp</span>, <span style="color:#a6e22e">reactive</span>, <span style="color:#a6e22e">onMounted</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">Vue</span>
-
-    <span style="color:#75715e">// 复用性
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">useTitle</span>() {
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reactive</span>({
-            <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hello vue3!!!!!&#39;</span>
-        })
-
-        <span style="color:#a6e22e">onMounted</span>(() =&gt; {
-            <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;vue3, hello!!!&#39;</span>
-        })
-
-        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
-            <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;title 2s&#39;</span>
-        }, <span style="color:#ae81ff">2000</span>)
-        
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state</span>
-    }
-
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">useCounter</span>() {
-        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reactive</span>({
-            <span style="color:#a6e22e">counter</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
-        })
-        <span style="color:#a6e22e">onMounted</span>(() =&gt; {
-            <span style="color:#a6e22e">state2</span>.<span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-        })
-        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">state2</span>
-    }
-
-
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createApp</span>({
-        <span style="color:#a6e22e">setup</span>() {
-            <span style="color:#75715e">// title
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useTitle</span>()
-
-            <span style="color:#75715e">// counter
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">state2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useCounter</span>()
-
-            <span style="color:#75715e">// 上下文给render使用
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> {
-                <span style="color:#a6e22e">state</span>,
-                <span style="color:#a6e22e">state2</span>
-            }
         },
     })
     <span style="color:#75715e">// app.component()
@@ -466,7 +465,9 @@
   <div class="post-nav w-50"><div class="prev-post">
       <a href="/zh-cn/posts/javascripts/coroutine/">JavaScript中的协程与生产者消费者模式</a>
     </div></div>
-  <div class="post-nav flex-row-reverse"></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/zh-cn/posts/javascripts/prototype_chain/">JavaScript继承、原型和原型链</a>
+    </div></div>
 </div></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
   repo="splwany/splwany.github.io"
   issue-term="pathname"
@@ -484,7 +485,7 @@
     <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
 </section><section class="recent-posts row surface">
   <h4>最近文章</h4>
-  <ul><li><a href="/zh-cn/posts/webnotes/learn_vue/">学习VUE</a></li><li><a href="/zh-cn/posts/javascripts/coroutine/">JavaScript中的协程与生产者消费者模式</a></li><li><a href="/zh-cn/posts/webnotes/learn_css/">学习CSS</a></li><li><a href="/zh-cn/posts/pythons/python_tips/">Python小贴士</a></li><li><a href="/zh-cn/posts/webnotes/questions/">待学习的知识</a></li></ul>
+  <ul><li><a href="/zh-cn/posts/javascripts/prototype_chain/">JavaScript继承、原型和原型链</a></li><li><a href="/zh-cn/posts/webnotes/learn_vue/">学习VUE</a></li><li><a href="/zh-cn/posts/javascripts/coroutine/">JavaScript中的协程与生产者消费者模式</a></li><li><a href="/zh-cn/posts/webnotes/learn_css/">学习CSS</a></li><li><a href="/zh-cn/posts/pythons/python_tips/">Python小贴士</a></li></ul>
 </section>
 <section class="taxonomy-categories row surface">
   <h4>
@@ -493,7 +494,7 @@
   <div><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
       Shortcode <span class="badge rounded-pill">9</span>
     </a><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
-      学习笔记 <span class="badge rounded-pill">5</span>
+      学习笔记 <span class="badge rounded-pill">6</span>
     </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
       待办 <span class="badge rounded-pill">1</span>
     </a></div>
@@ -502,7 +503,7 @@
     <a href="/zh-cn/series">专栏</a>
   </h4>
   <div><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="前端">
-      前端 <span class="badge rounded-pill">5</span>
+      前端 <span class="badge rounded-pill">6</span>
     </a><a href="/zh-cn/series/python/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="python">
       python <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="用户手册">
@@ -512,7 +513,9 @@
   <h4>
     <a href="/zh-cn/tags">标签</a>
   </h4>
-  <div><a href="/zh-cn/tags/alert/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Alert">
+  <div><a href="/zh-cn/tags/javascript/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JavaScript">
+      JavaScript <span class="badge rounded-pill">2</span>
+    </a><a href="/zh-cn/tags/alert/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Alert">
       Alert <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/codepen/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CodePen">
       CodePen <span class="badge rounded-pill">1</span>
@@ -520,16 +523,22 @@
       CSS <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="dataclasses">
       dataclasses <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/es5/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="ES5">
+      ES5 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/es6/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="ES6">
+      ES6 <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/html/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="HTML">
       HTML <span class="badge rounded-pill">1</span>
-    </a><a href="/zh-cn/tags/javascript/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JavaScript">
-      JavaScript <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/jsfiddle/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JSFiddle">
       JSFiddle <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/jsrun/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JSRun">
       JSRun <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/logging/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="logging">
+      logging <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="namedtuple">
       namedtuple <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/prototype/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="prototype">
+      prototype <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/threading/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="threading">
       threading <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/vue/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="VUE">
@@ -538,12 +547,16 @@
       Youku <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/%E5%8D%8F%E7%A8%8B/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="协程">
       协程 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="原型链">
+      原型链 <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="哔哩哔哩">
       哔哩哔哩 <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="爱奇艺">
       爱奇艺 <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="生产者消费者模式">
       生产者消费者模式 <span class="badge rounded-pill">1</span>
+    </a><a href="/zh-cn/tags/%E7%BB%A7%E6%89%BF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="继承">
+      继承 <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="网易云音乐">
       网易云音乐 <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="腾讯视频">
