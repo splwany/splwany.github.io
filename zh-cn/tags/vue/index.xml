@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VUE on 在下傲娇的泰迪</title>
-    <link>/zh-cn/tags/vue/</link>
+    <link>https://splwany.github.io/zh-cn/tags/vue/</link>
     <description>Recent content in VUE on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 20 May 2021 22:19:53 +0800</lastBuildDate><atom:link href="/zh-cn/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 May 2021 22:19:53 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习VUE</title>
-      <link>/zh-cn/posts/webnotes/learn_vue/</link>
+      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</link>
       <pubDate>Thu, 20 May 2021 22:19:53 +0800</pubDate>
       
-      <guid>/zh-cn/posts/webnotes/learn_vue/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</guid>
       <description>&lt;p&gt;开课吧VUE体验课笔记&lt;/p&gt;</description>
     </item>
     

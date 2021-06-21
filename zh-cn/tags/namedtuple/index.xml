@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>namedtuple on 在下傲娇的泰迪</title>
-    <link>/zh-cn/tags/namedtuple/</link>
+    <link>https://splwany.github.io/zh-cn/tags/namedtuple/</link>
     <description>Recent content in namedtuple on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 12 May 2021 14:52:58 +0800</lastBuildDate><atom:link href="/zh-cn/tags/namedtuple/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 May 2021 14:52:58 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/tags/namedtuple/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python小贴士</title>
-      <link>/zh-cn/posts/pythons/python_tips/</link>
+      <link>https://splwany.github.io/zh-cn/posts/pythons/python_tips/</link>
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
-      <guid>/zh-cn/posts/pythons/python_tips/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/pythons/python_tips/</guid>
       <description>&lt;p&gt;Python的一些使用技巧和有趣的库&lt;/p&gt;</description>
     </item>
     

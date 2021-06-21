@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on 在下傲娇的泰迪</title>
-    <link>/zh-cn/series/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://splwany.github.io/zh-cn/series/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 22 May 2021 10:34:34 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 May 2021 10:34:34 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript继承、原型和原型链</title>
-      <link>/zh-cn/posts/javascripts/prototype_chain/</link>
+      <link>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/posts/javascripts/prototype_chain/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</guid>
       <description>&lt;p&gt;JavaScript中的继承、原型、原型链，以及类的创建&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>学习VUE</title>
-      <link>/zh-cn/posts/webnotes/learn_vue/</link>
+      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</link>
       <pubDate>Thu, 20 May 2021 22:19:53 +0800</pubDate>
       
-      <guid>/zh-cn/posts/webnotes/learn_vue/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</guid>
       <description>&lt;p&gt;开课吧VUE体验课笔记&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JavaScript中的协程与生产者消费者模式</title>
-      <link>/zh-cn/posts/javascripts/coroutine/</link>
+      <link>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</link>
       <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
       
-      <guid>/zh-cn/posts/javascripts/coroutine/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</guid>
       <description>&lt;p&gt;JavaScript中的协程以及实现生产者消费者模式&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>学习CSS</title>
-      <link>/zh-cn/posts/webnotes/learn_css/</link>
+      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</link>
       <pubDate>Sun, 16 May 2021 16:11:51 +0800</pubDate>
       
-      <guid>/zh-cn/posts/webnotes/learn_css/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</guid>
       <description>&lt;p&gt;MDN文档的CSS学习笔记&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>待学习的知识</title>
-      <link>/zh-cn/posts/webnotes/questions/</link>
+      <link>https://splwany.github.io/zh-cn/posts/webnotes/questions/</link>
       <pubDate>Thu, 06 May 2021 10:18:08 +0800</pubDate>
       
-      <guid>/zh-cn/posts/webnotes/questions/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/webnotes/questions/</guid>
       <description>&lt;p&gt;面试大厂需要了解的知识点&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>学习HTML</title>
-      <link>/zh-cn/posts/webnotes/learn_html/</link>
+      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</link>
       <pubDate>Wed, 05 May 2021 20:45:33 +0800</pubDate>
       
-      <guid>/zh-cn/posts/webnotes/learn_html/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</guid>
       <description>&lt;p&gt;MDN文档的HTML学习笔记&lt;/p&gt;</description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wandb on 在下傲娇的泰迪</title>
-    <link>/zh-cn/tags/wandb/</link>
+    <link>https://splwany.github.io/zh-cn/tags/wandb/</link>
     <description>Recent content in wandb on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 02 Jun 2021 21:58:24 +0800</lastBuildDate><atom:link href="/zh-cn/tags/wandb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Jun 2021 21:58:24 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/tags/wandb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Weights &amp; Biases 深度学习可视化工具</title>
-      <link>/zh-cn/posts/pythons/weights_and_biases/</link>
+      <link>https://splwany.github.io/zh-cn/posts/pythons/weights_and_biases/</link>
       <pubDate>Wed, 02 Jun 2021 21:58:24 +0800</pubDate>
       
-      <guid>/zh-cn/posts/pythons/weights_and_biases/</guid>
+      <guid>https://splwany.github.io/zh-cn/posts/pythons/weights_and_biases/</guid>
       <description>&lt;p&gt;深度学习超强大的一款可视化工具&lt;/p&gt;</description>
     </item>
     

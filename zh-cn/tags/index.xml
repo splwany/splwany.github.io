@@ -2,242 +2,287 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>标签 on 在下傲娇的泰迪</title>
-    <link>/zh-cn/tags/</link>
+    <link>https://splwany.github.io/zh-cn/tags/</link>
     <description>Recent content in 标签 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 02 Jun 2021 21:58:24 +0800</lastBuildDate><atom:link href="/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Jun 2021 14:23:36 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>android</title>
+      <link>https://splwany.github.io/zh-cn/tags/android/</link>
+      <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
+      
+      <guid>https://splwany.github.io/zh-cn/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ncnn</title>
+      <link>https://splwany.github.io/zh-cn/tags/ncnn/</link>
+      <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
+      
+      <guid>https://splwany.github.io/zh-cn/tags/ncnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>onnx</title>
+      <link>https://splwany.github.io/zh-cn/tags/onnx/</link>
+      <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
+      
+      <guid>https://splwany.github.io/zh-cn/tags/onnx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytorch</title>
+      <link>https://splwany.github.io/zh-cn/tags/pytorch/</link>
+      <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
+      
+      <guid>https://splwany.github.io/zh-cn/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yolov5</title>
+      <link>https://splwany.github.io/zh-cn/tags/yolov5/</link>
+      <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
+      
+      <guid>https://splwany.github.io/zh-cn/tags/yolov5/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>wandb</title>
-      <link>/zh-cn/tags/wandb/</link>
+      <link>https://splwany.github.io/zh-cn/tags/wandb/</link>
       <pubDate>Wed, 02 Jun 2021 21:58:24 +0800</pubDate>
       
-      <guid>/zh-cn/tags/wandb/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/wandb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ES5</title>
-      <link>/zh-cn/tags/es5/</link>
+      <link>https://splwany.github.io/zh-cn/tags/es5/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/es5/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/es5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ES6</title>
-      <link>/zh-cn/tags/es6/</link>
+      <link>https://splwany.github.io/zh-cn/tags/es6/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/es6/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/es6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>/zh-cn/tags/javascript/</link>
+      <link>https://splwany.github.io/zh-cn/tags/javascript/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/javascript/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prototype</title>
-      <link>/zh-cn/tags/prototype/</link>
+      <link>https://splwany.github.io/zh-cn/tags/prototype/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/prototype/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/prototype/</guid>
       <description></description>
     </item>
     
     <item>
       <title>原型链</title>
-      <link>/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>继承</title>
-      <link>/zh-cn/tags/%E7%BB%A7%E6%89%BF/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>/zh-cn/tags/%E7%BB%A7%E6%89%BF/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E7%BB%A7%E6%89%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VUE</title>
-      <link>/zh-cn/tags/vue/</link>
+      <link>https://splwany.github.io/zh-cn/tags/vue/</link>
       <pubDate>Thu, 20 May 2021 22:19:53 +0800</pubDate>
       
-      <guid>/zh-cn/tags/vue/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/vue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>协程</title>
-      <link>/zh-cn/tags/%E5%8D%8F%E7%A8%8B/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E5%8D%8F%E7%A8%8B/</link>
       <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
       
-      <guid>/zh-cn/tags/%E5%8D%8F%E7%A8%8B/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E5%8D%8F%E7%A8%8B/</guid>
       <description></description>
     </item>
     
     <item>
       <title>生产者消费者模式</title>
-      <link>/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
       
-      <guid>/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CSS</title>
-      <link>/zh-cn/tags/css/</link>
+      <link>https://splwany.github.io/zh-cn/tags/css/</link>
       <pubDate>Sun, 16 May 2021 16:11:51 +0800</pubDate>
       
-      <guid>/zh-cn/tags/css/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dataclasses</title>
-      <link>/zh-cn/tags/dataclasses/</link>
+      <link>https://splwany.github.io/zh-cn/tags/dataclasses/</link>
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
-      <guid>/zh-cn/tags/dataclasses/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/dataclasses/</guid>
       <description></description>
     </item>
     
     <item>
       <title>logging</title>
-      <link>/zh-cn/tags/logging/</link>
+      <link>https://splwany.github.io/zh-cn/tags/logging/</link>
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
-      <guid>/zh-cn/tags/logging/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>namedtuple</title>
-      <link>/zh-cn/tags/namedtuple/</link>
+      <link>https://splwany.github.io/zh-cn/tags/namedtuple/</link>
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
-      <guid>/zh-cn/tags/namedtuple/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/namedtuple/</guid>
       <description></description>
     </item>
     
     <item>
       <title>threading</title>
-      <link>/zh-cn/tags/threading/</link>
+      <link>https://splwany.github.io/zh-cn/tags/threading/</link>
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
-      <guid>/zh-cn/tags/threading/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/threading/</guid>
       <description></description>
     </item>
     
     <item>
       <title>面试问题</title>
-      <link>/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</link>
       <pubDate>Thu, 06 May 2021 10:18:08 +0800</pubDate>
       
-      <guid>/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>/zh-cn/tags/html/</link>
+      <link>https://splwany.github.io/zh-cn/tags/html/</link>
       <pubDate>Wed, 05 May 2021 20:45:33 +0800</pubDate>
       
-      <guid>/zh-cn/tags/html/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Alert</title>
-      <link>/zh-cn/tags/alert/</link>
+      <link>https://splwany.github.io/zh-cn/tags/alert/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/alert/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/alert/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CodePen</title>
-      <link>/zh-cn/tags/codepen/</link>
+      <link>https://splwany.github.io/zh-cn/tags/codepen/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/codepen/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/codepen/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JSFiddle</title>
-      <link>/zh-cn/tags/jsfiddle/</link>
+      <link>https://splwany.github.io/zh-cn/tags/jsfiddle/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/jsfiddle/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/jsfiddle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JSRun</title>
-      <link>/zh-cn/tags/jsrun/</link>
+      <link>https://splwany.github.io/zh-cn/tags/jsrun/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/jsrun/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/jsrun/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Youku</title>
-      <link>/zh-cn/tags/youku/</link>
+      <link>https://splwany.github.io/zh-cn/tags/youku/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/youku/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/youku/</guid>
       <description></description>
     </item>
     
     <item>
       <title>哔哩哔哩</title>
-      <link>/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>爱奇艺</title>
-      <link>/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/</guid>
       <description></description>
     </item>
     
     <item>
       <title>网易云音乐</title>
-      <link>/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</guid>
       <description></description>
     </item>
     
     <item>
       <title>腾讯视频</title>
-      <link>/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</link>
+      <link>https://splwany.github.io/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</guid>
+      <guid>https://splwany.github.io/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</guid>
       <description></description>
     </item>
     
