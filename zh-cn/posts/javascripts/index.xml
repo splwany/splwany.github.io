@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript笔记 on 在下傲娇的泰迪</title>
-    <link>https://splwany.github.io/zh-cn/posts/javascripts/</link>
+    <link>/zh-cn/posts/javascripts/</link>
     <description>Recent content in JavaScript笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 22 May 2021 10:34:34 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 May 2021 10:34:34 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript继承、原型和原型链</title>
-      <link>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</link>
+      <link>/zh-cn/posts/javascripts/prototype_chain/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</guid>
+      <guid>/zh-cn/posts/javascripts/prototype_chain/</guid>
       <description>&lt;p&gt;JavaScript中的继承、原型、原型链，以及类的创建&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JavaScript中的协程与生产者消费者模式</title>
-      <link>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</link>
+      <link>/zh-cn/posts/javascripts/coroutine/</link>
       <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</guid>
+      <guid>/zh-cn/posts/javascripts/coroutine/</guid>
       <description>&lt;p&gt;JavaScript中的协程以及实现生产者消费者模式&lt;/p&gt;</description>
     </item>
     

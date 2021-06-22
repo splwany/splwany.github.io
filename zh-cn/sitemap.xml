@@ -2,488 +2,488 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://splwany.github.io/zh-cn/tags/android/</loc>
+    <loc>/zh-cn/tags/android/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/series/deep-learning/</loc>
+    <loc>/zh-cn/series/deep-learning/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/ncnn/</loc>
+    <loc>/zh-cn/tags/ncnn/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/onnx/</loc>
+    <loc>/zh-cn/tags/onnx/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/pythons/</loc>
+    <loc>/zh-cn/posts/pythons/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/pytorch/</loc>
+    <loc>/zh-cn/tags/pytorch/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/pythons/pytorch_to_android/</loc>
+    <loc>/zh-cn/posts/pythons/pytorch_to_android/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/yolov5/</loc>
+    <loc>/zh-cn/tags/yolov5/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/series/</loc>
-    <lastmod>2021-06-21T14:23:36+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://splwany.github.io/en/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/series/"
-                />
-  </url><url>
-    <loc>https://splwany.github.io/zh-cn/categories/</loc>
+    <loc>/zh-cn/series/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/categories/"
+                href="/zh-tw/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/categories/"
+                href="/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/categories/"
+                href="/zh-cn/series/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/</loc>
+    <loc>/zh-cn/categories/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/"
+                href="/zh-tw/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/"
+                href="/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/"
+                href="/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-06-21T14:23:36+08:00</lastmod>
-  </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/</loc>
+    <loc>/zh-cn/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/"
+                href="/zh-tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/posts/"
+                href="/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/"
+                href="/zh-cn/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/</loc>
+    <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-06-21T14:23:36+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/</loc>
     <lastmod>2021-06-21T14:23:36+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/tags/"
+                href="/zh-tw/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/tags/"
+                href="/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/"
+                href="/zh-cn/posts/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/wandb/</loc>
+    <loc>/zh-cn/tags/</loc>
+    <lastmod>2021-06-21T14:23:36+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="/zh-tw/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/"
+                />
+  </url><url>
+    <loc>/zh-cn/tags/wandb/</loc>
     <lastmod>2021-06-02T21:58:24+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/pythons/weights_and_biases/</loc>
+    <loc>/zh-cn/posts/pythons/weights_and_biases/</loc>
     <lastmod>2021-06-02T21:58:24+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/es5/</loc>
+    <loc>/zh-cn/tags/es5/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/es6/</loc>
+    <loc>/zh-cn/tags/es6/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/javascript/</loc>
+    <loc>/zh-cn/tags/javascript/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/javascripts/</loc>
+    <loc>/zh-cn/posts/javascripts/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</loc>
+    <loc>/zh-cn/posts/javascripts/prototype_chain/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/prototype/</loc>
+    <loc>/zh-cn/tags/prototype/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</loc>
+    <loc>/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E7%BB%A7%E6%89%BF/</loc>
+    <loc>/zh-cn/tags/%E7%BB%A7%E6%89%BF/</loc>
     <lastmod>2021-05-22T10:34:34+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/vue/</loc>
+    <loc>/zh-cn/tags/vue/</loc>
     <lastmod>2021-05-20T22:19:53+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/webnotes/</loc>
+    <loc>/zh-cn/posts/webnotes/</loc>
     <lastmod>2021-05-20T22:19:53+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</loc>
+    <loc>/zh-cn/posts/webnotes/learn_vue/</loc>
     <lastmod>2021-05-20T22:19:53+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</loc>
+    <loc>/zh-cn/posts/javascripts/coroutine/</loc>
     <lastmod>2021-05-18T08:34:54+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E5%8D%8F%E7%A8%8B/</loc>
+    <loc>/zh-cn/tags/%E5%8D%8F%E7%A8%8B/</loc>
     <lastmod>2021-05-18T08:34:54+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2021-05-18T08:34:54+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/css/</loc>
+    <loc>/zh-cn/tags/css/</loc>
     <lastmod>2021-05-16T16:11:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/tags/css/"
+                href="/en/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/css/"
+                href="/zh-cn/tags/css/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</loc>
+    <loc>/zh-cn/posts/webnotes/learn_css/</loc>
     <lastmod>2021-05-16T16:11:51+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/dataclasses/</loc>
+    <loc>/zh-cn/tags/dataclasses/</loc>
     <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/logging/</loc>
+    <loc>/zh-cn/tags/logging/</loc>
     <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/namedtuple/</loc>
+    <loc>/zh-cn/tags/namedtuple/</loc>
     <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/series/python/</loc>
+    <loc>/zh-cn/series/python/</loc>
     <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/pythons/python_tips/</loc>
+    <loc>/zh-cn/posts/pythons/python_tips/</loc>
     <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/threading/</loc>
+    <loc>/zh-cn/tags/threading/</loc>
     <lastmod>2021-05-12T14:52:58+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/categories/%E5%BE%85%E5%8A%9E/</loc>
+    <loc>/zh-cn/categories/%E5%BE%85%E5%8A%9E/</loc>
     <lastmod>2021-05-06T10:18:08+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/webnotes/questions/</loc>
+    <loc>/zh-cn/posts/webnotes/questions/</loc>
     <lastmod>2021-05-06T10:18:08+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</loc>
+    <loc>/zh-cn/tags/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2021-05-06T10:18:08+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/html/</loc>
+    <loc>/zh-cn/tags/html/</loc>
     <lastmod>2021-05-05T20:45:33+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/tags/html/"
+                href="/en/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/html/"
+                href="/zh-cn/tags/html/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</loc>
+    <loc>/zh-cn/posts/webnotes/learn_html/</loc>
     <lastmod>2021-05-05T20:45:33+08:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/alert/</loc>
+    <loc>/zh-cn/tags/alert/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/tags/alert/"
+                href="/zh-tw/tags/alert/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/alert/"
+                href="/zh-cn/tags/alert/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/alert/</loc>
+    <loc>/zh-cn/posts/shortcodes/alert/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/alert/"
+                href="/zh-tw/posts/shortcodes/alert/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/alert/"
+                href="/zh-cn/posts/shortcodes/alert/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/bilibili/</loc>
+    <loc>/zh-cn/posts/shortcodes/bilibili/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/bilibili/"
+                href="/zh-tw/posts/shortcodes/bilibili/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/bilibili/"
+                href="/zh-cn/posts/shortcodes/bilibili/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/codepen/</loc>
+    <loc>/zh-cn/tags/codepen/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/tags/codepen/"
+                href="/zh-tw/tags/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/codepen/"
+                href="/zh-cn/tags/codepen/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/codepen/</loc>
+    <loc>/zh-cn/posts/shortcodes/codepen/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/codepen/"
+                href="/zh-tw/posts/shortcodes/codepen/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/codepen/"
+                href="/zh-cn/posts/shortcodes/codepen/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/jsfiddle/</loc>
+    <loc>/zh-cn/tags/jsfiddle/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/tags/jsfiddle/"
+                href="/zh-tw/tags/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/jsfiddle/"
+                href="/zh-cn/tags/jsfiddle/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/jsfiddle/</loc>
+    <loc>/zh-cn/posts/shortcodes/jsfiddle/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/jsfiddle/"
+                href="/zh-tw/posts/shortcodes/jsfiddle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/jsfiddle/"
+                href="/zh-cn/posts/shortcodes/jsfiddle/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/jsrun/</loc>
+    <loc>/zh-cn/tags/jsrun/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/tags/jsrun/"
+                href="/zh-tw/tags/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/jsrun/"
+                href="/zh-cn/tags/jsrun/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/jsrun/</loc>
+    <loc>/zh-cn/posts/shortcodes/jsrun/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/jsrun/"
+                href="/zh-tw/posts/shortcodes/jsrun/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/jsrun/"
+                href="/zh-cn/posts/shortcodes/jsrun/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/categories/shortcode/</loc>
+    <loc>/zh-cn/categories/shortcode/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/categories/shortcode/"
+                href="/zh-tw/categories/shortcode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/categories/shortcode/"
+                href="/zh-cn/categories/shortcode/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/</loc>
+    <loc>/zh-cn/posts/shortcodes/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/"
+                href="/zh-tw/posts/shortcodes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/"
+                href="/zh-cn/posts/shortcodes/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/youku/</loc>
+    <loc>/zh-cn/tags/youku/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/tags/youku/"
+                href="/zh-tw/tags/youku/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/tags/youku/"
+                href="/zh-cn/tags/youku/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/youku/</loc>
+    <loc>/zh-cn/posts/shortcodes/youku/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/youku/"
+                href="/zh-tw/posts/shortcodes/youku/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/youku/"
+                href="/zh-cn/posts/shortcodes/youku/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/</loc>
+    <loc>/zh-cn/tags/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/</loc>
+    <loc>/zh-cn/tags/%E7%88%B1%E5%A5%87%E8%89%BA/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/iqiyi/</loc>
+    <loc>/zh-cn/posts/shortcodes/iqiyi/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/iqiyi/"
+                href="/zh-tw/posts/shortcodes/iqiyi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/iqiyi/"
+                href="/zh-cn/posts/shortcodes/iqiyi/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/</loc>
+    <loc>/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
+    <loc>/zh-cn/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/neteasemusic/</loc>
+    <loc>/zh-cn/posts/shortcodes/neteasemusic/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/neteasemusic/"
+                href="/zh-tw/posts/shortcodes/neteasemusic/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/neteasemusic/"
+                href="/zh-cn/posts/shortcodes/neteasemusic/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</loc>
+    <loc>/zh-cn/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/posts/shortcodes/tencentvideo/</loc>
+    <loc>/zh-cn/posts/shortcodes/tencentvideo/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/posts/shortcodes/tencentvideo/"
+                href="/zh-tw/posts/shortcodes/tencentvideo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/posts/shortcodes/tencentvideo/"
+                href="/zh-cn/posts/shortcodes/tencentvideo/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/archives/</loc>
+    <loc>/zh-cn/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/archives/"
+                href="/zh-tw/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/archives/"
+                href="/en/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/archives/"
+                href="/zh-cn/archives/"
                 />
   </url><url>
-    <loc>https://splwany.github.io/zh-cn/search/</loc>
+    <loc>/zh-cn/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="https://splwany.github.io/zh-tw/search/"
+                href="/zh-tw/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://splwany.github.io/en/search/"
+                href="/en/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://splwany.github.io/zh-cn/search/"
+                href="/zh-cn/search/"
                 />
   </url>
 </urlset>

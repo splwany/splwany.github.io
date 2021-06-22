@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>待办 on 在下傲娇的泰迪</title>
-    <link>https://splwany.github.io/zh-cn/categories/%E5%BE%85%E5%8A%9E/</link>
+    <link>/zh-cn/categories/%E5%BE%85%E5%8A%9E/</link>
     <description>Recent content in 待办 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 06 May 2021 10:18:08 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/categories/%E5%BE%85%E5%8A%9E/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 May 2021 10:18:08 +0800</lastBuildDate><atom:link href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>待学习的知识</title>
-      <link>https://splwany.github.io/zh-cn/posts/webnotes/questions/</link>
+      <link>/zh-cn/posts/webnotes/questions/</link>
       <pubDate>Thu, 06 May 2021 10:18:08 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/webnotes/questions/</guid>
+      <guid>/zh-cn/posts/webnotes/questions/</guid>
       <description>&lt;p&gt;面试大厂需要了解的知识点&lt;/p&gt;</description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTML on 在下傲娇的泰迪</title>
-    <link>https://splwany.github.io/zh-cn/tags/html/</link>
+    <link>/zh-cn/tags/html/</link>
     <description>Recent content in HTML on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 05 May 2021 20:45:33 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 May 2021 20:45:33 +0800</lastBuildDate><atom:link href="/zh-cn/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习HTML</title>
-      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</link>
+      <link>/zh-cn/posts/webnotes/learn_html/</link>
       <pubDate>Wed, 05 May 2021 20:45:33 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</guid>
+      <guid>/zh-cn/posts/webnotes/learn_html/</guid>
       <description>&lt;p&gt;MDN文档的HTML学习笔记&lt;/p&gt;</description>
     </item>
     

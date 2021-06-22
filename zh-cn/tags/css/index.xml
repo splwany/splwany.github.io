@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSS on 在下傲娇的泰迪</title>
-    <link>https://splwany.github.io/zh-cn/tags/css/</link>
+    <link>/zh-cn/tags/css/</link>
     <description>Recent content in CSS on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 16 May 2021 16:11:51 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 May 2021 16:11:51 +0800</lastBuildDate><atom:link href="/zh-cn/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习CSS</title>
-      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</link>
+      <link>/zh-cn/posts/webnotes/learn_css/</link>
       <pubDate>Sun, 16 May 2021 16:11:51 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</guid>
+      <guid>/zh-cn/posts/webnotes/learn_css/</guid>
       <description>&lt;p&gt;MDN文档的CSS学习笔记&lt;/p&gt;</description>
     </item>
     

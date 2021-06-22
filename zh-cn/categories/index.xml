@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>分类 on 在下傲娇的泰迪</title>
-    <link>https://splwany.github.io/zh-cn/categories/</link>
+    <link>/zh-cn/categories/</link>
     <description>Recent content in 分类 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 21 Jun 2021 14:23:36 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Jun 2021 14:23:36 +0800</lastBuildDate><atom:link href="/zh-cn/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习笔记</title>
-      <link>https://splwany.github.io/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>待办</title>
-      <link>https://splwany.github.io/zh-cn/categories/%E5%BE%85%E5%8A%9E/</link>
+      <link>/zh-cn/categories/%E5%BE%85%E5%8A%9E/</link>
       <pubDate>Thu, 06 May 2021 10:18:08 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/categories/%E5%BE%85%E5%8A%9E/</guid>
+      <guid>/zh-cn/categories/%E5%BE%85%E5%8A%9E/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shortcode</title>
-      <link>https://splwany.github.io/zh-cn/categories/shortcode/</link>
+      <link>/zh-cn/categories/shortcode/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/categories/shortcode/</guid>
+      <guid>/zh-cn/categories/shortcode/</guid>
       <description></description>
     </item>
     

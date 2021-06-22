@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习笔记 on 在下傲娇的泰迪</title>
-    <link>https://splwany.github.io/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <link>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 学习笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 21 Jun 2021 14:23:36 +0800</lastBuildDate><atom:link href="https://splwany.github.io/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Jun 2021 14:23:36 +0800</lastBuildDate><atom:link href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PyTorch模型部署到Android</title>
-      <link>https://splwany.github.io/zh-cn/posts/pythons/pytorch_to_android/</link>
+      <link>/zh-cn/posts/pythons/pytorch_to_android/</link>
       <pubDate>Mon, 21 Jun 2021 14:23:36 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/pythons/pytorch_to_android/</guid>
+      <guid>/zh-cn/posts/pythons/pytorch_to_android/</guid>
       <description>&lt;p&gt;YOLOV5模型部署到Android的过程记录，系统环境：Ubuntu&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Weights &amp; Biases 深度学习可视化工具</title>
-      <link>https://splwany.github.io/zh-cn/posts/pythons/weights_and_biases/</link>
+      <link>/zh-cn/posts/pythons/weights_and_biases/</link>
       <pubDate>Wed, 02 Jun 2021 21:58:24 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/pythons/weights_and_biases/</guid>
+      <guid>/zh-cn/posts/pythons/weights_and_biases/</guid>
       <description>&lt;p&gt;深度学习超强大的一款可视化工具&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JavaScript继承、原型和原型链</title>
-      <link>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</link>
+      <link>/zh-cn/posts/javascripts/prototype_chain/</link>
       <pubDate>Sat, 22 May 2021 10:34:34 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/javascripts/prototype_chain/</guid>
+      <guid>/zh-cn/posts/javascripts/prototype_chain/</guid>
       <description>&lt;p&gt;JavaScript中的继承、原型、原型链，以及类的创建&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>学习VUE</title>
-      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</link>
+      <link>/zh-cn/posts/webnotes/learn_vue/</link>
       <pubDate>Thu, 20 May 2021 22:19:53 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_vue/</guid>
+      <guid>/zh-cn/posts/webnotes/learn_vue/</guid>
       <description>&lt;p&gt;开课吧VUE体验课笔记&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JavaScript中的协程与生产者消费者模式</title>
-      <link>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</link>
+      <link>/zh-cn/posts/javascripts/coroutine/</link>
       <pubDate>Tue, 18 May 2021 08:34:54 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/javascripts/coroutine/</guid>
+      <guid>/zh-cn/posts/javascripts/coroutine/</guid>
       <description>&lt;p&gt;JavaScript中的协程以及实现生产者消费者模式&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>学习CSS</title>
-      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</link>
+      <link>/zh-cn/posts/webnotes/learn_css/</link>
       <pubDate>Sun, 16 May 2021 16:11:51 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_css/</guid>
+      <guid>/zh-cn/posts/webnotes/learn_css/</guid>
       <description>&lt;p&gt;MDN文档的CSS学习笔记&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Python小贴士</title>
-      <link>https://splwany.github.io/zh-cn/posts/pythons/python_tips/</link>
+      <link>/zh-cn/posts/pythons/python_tips/</link>
       <pubDate>Wed, 12 May 2021 14:52:58 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/pythons/python_tips/</guid>
+      <guid>/zh-cn/posts/pythons/python_tips/</guid>
       <description>&lt;p&gt;Python的一些使用技巧和有趣的库&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>学习HTML</title>
-      <link>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</link>
+      <link>/zh-cn/posts/webnotes/learn_html/</link>
       <pubDate>Wed, 05 May 2021 20:45:33 +0800</pubDate>
       
-      <guid>https://splwany.github.io/zh-cn/posts/webnotes/learn_html/</guid>
+      <guid>/zh-cn/posts/webnotes/learn_html/</guid>
       <description>&lt;p&gt;MDN文档的HTML学习笔记&lt;/p&gt;</description>
     </item>
     
