@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deviceorientation on 在下傲娇的泰迪</title>
+    <link>/zh-cn/tags/deviceorientation/</link>
+    <description>Recent content in deviceorientation on 在下傲娇的泰迪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 21 Jul 2021 17:04:09 +0800</lastBuildDate><atom:link href="/zh-cn/tags/deviceorientation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网页重力感应</title>
+      <link>/zh-cn/posts/webnotes/orientation/</link>
+      <pubDate>Wed, 21 Jul 2021 17:04:09 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/webnotes/orientation/</guid>
+      <description>&lt;p&gt;使用deviceorientation事件获取手机重力参数&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

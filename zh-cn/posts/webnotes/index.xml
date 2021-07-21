@@ -6,7 +6,16 @@
     <description>Recent content in Web笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 20 May 2021 22:19:53 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 17:04:09 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网页重力感应</title>
+      <link>/zh-cn/posts/webnotes/orientation/</link>
+      <pubDate>Wed, 21 Jul 2021 17:04:09 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/webnotes/orientation/</guid>
+      <description>&lt;p&gt;使用deviceorientation事件获取手机重力参数&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>学习VUE</title>
       <link>/zh-cn/posts/webnotes/learn_vue/</link>
