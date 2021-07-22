@@ -162,7 +162,7 @@
     if (window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', e => {
             const {alpha, beta, gamma} = e;
-            targetElem.style.transform = `perspective(10em) translateZ(0em) rotateY(-${gamma}deg)`;
+            targetElem.style.transform = `perspective(10em) translateZ(0em) rotateY(${-gamma}deg)`;
             targetElem.textContent = `${parseInt(-gamma)}`;
         });
     }
