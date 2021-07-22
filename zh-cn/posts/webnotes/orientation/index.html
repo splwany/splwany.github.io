@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="网页重力感应">
 <meta itemprop="description" content="使用deviceorientation事件获取手机重力参数"><meta itemprop="datePublished" content="2021-07-21T17:04:09&#43;08:00" />
 <meta itemprop="dateModified" content="2021-07-21T17:04:09&#43;08:00" />
-<meta itemprop="wordCount" content="60">
+<meta itemprop="wordCount" content="58">
 <meta itemprop="keywords" content="deviceorientation," /><meta property="og:title" content="网页重力感应" />
 <meta property="og:description" content="使用deviceorientation事件获取手机重力参数" />
 <meta property="og:type" content="article" />
@@ -159,10 +159,8 @@
     const targetElem = document.querySelector('#demo span');
     if (window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', e => {
-            console.log(e);
             const {alpha, beta, gamma} = e;
-            console.log(alpha);
-            targetElem.style.transform = `rotateX(${beta}deg) rotateY(${gamma}deg) rotateX(${alpha}deg))`;
+            targetElem.style.transform = `rotateX(${beta}deg) rotateY(${gamma}deg) rotateX(${alpha}deg)`;
         });
     }
 </script></div><div class="post-copyright mb-4">
