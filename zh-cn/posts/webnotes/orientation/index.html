@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="网页重力感应">
 <meta itemprop="description" content="使用deviceorientation事件获取手机重力参数"><meta itemprop="datePublished" content="2021-07-21T17:04:09&#43;08:00" />
 <meta itemprop="dateModified" content="2021-07-21T17:04:09&#43;08:00" />
-<meta itemprop="wordCount" content="56">
+<meta itemprop="wordCount" content="60">
 <meta itemprop="keywords" content="deviceorientation," /><meta property="og:title" content="网页重力感应" />
 <meta property="og:description" content="使用deviceorientation事件获取手机重力参数" />
 <meta property="og:type" content="article" />
@@ -153,17 +153,18 @@
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/deviceorientation/" class="post-taxonomy">#deviceorientation</a></div>
 <div class="post-content mb-3"><p>使用deviceorientation事件获取手机重力参数</p>
 <div id='demo' style="width: 100%; height: 400px; background-color: rgb(200, 200, 100); color: white; display: flex; justify-content: center; align-items: center;">
-    <span style="font-size: 1rem;"></span>
+    <span style="font-size: 2.5em; filter: drop-shadow(0 0 0.75rem crimson);">卧室嫩叠</span>
 </div>
 <script>
-if (window.DeviceOrientationEvent) {
-    const targetDiv = document.querySelector('#demo span');
-    window.addEventListener('deviceorientation', e => {
-        console.log(e);
-        const {alpha, beta, gamma} = e;
-        targetDiv.textContent = `x: ${beta}\ny: ${gamma}\nz: ${alpha}`;
-    });
-}
+    const targetElem = document.querySelector('#demo span');
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', e => {
+            console.log(e);
+            const {alpha, beta, gamma} = e;
+            console.log(alpha);
+            targetElem.style.transform = `rotateX(${beta}; rotateY(${gamma}); rotateX(${alpha}))`;
+        });
+    }
 </script></div><div class="post-copyright mb-4">
   <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
 </div><div class="post-reward mb-4 text-center">
