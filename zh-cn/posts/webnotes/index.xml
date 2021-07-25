@@ -6,7 +6,16 @@
     <description>Recent content in Web笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 21 Jul 2021 17:04:09 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 22:53:19 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>异步加载网络js脚本并返回Promise</title>
+      <link>/zh-cn/posts/webnotes/async_load_script/</link>
+      <pubDate>Sun, 25 Jul 2021 22:53:19 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/webnotes/async_load_script/</guid>
+      <description>&lt;p&gt;手写实现从网络异步加载js脚本，并返回Promise实例，如果加载成功就执行resolve，失败或超时就执行reject。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>网页重力感应</title>
       <link>/zh-cn/posts/webnotes/orientation/</link>
