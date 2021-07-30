@@ -6,7 +6,16 @@
     <description>Recent content in 学习笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 25 Jul 2021 22:53:19 +0800</lastBuildDate><atom:link href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jul 2021 20:34:36 +0800</lastBuildDate><atom:link href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>发布订阅模式实现LazyMan</title>
+      <link>/zh-cn/posts/javascripts/lazy_man/</link>
+      <pubDate>Fri, 30 Jul 2021 20:34:36 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/lazy_man/</guid>
+      <description>&lt;p&gt;使用发布订阅模式实现LazyMan的链式调用&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>异步加载网络js脚本并返回Promise</title>
       <link>/zh-cn/posts/webnotes/async_load_script/</link>

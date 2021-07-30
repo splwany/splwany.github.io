@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>发布订阅 on 在下傲娇的泰迪</title>
+    <link>/zh-cn/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</link>
+    <description>Recent content in 发布订阅 on 在下傲娇的泰迪</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 30 Jul 2021 20:34:36 +0800</lastBuildDate><atom:link href="/zh-cn/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>发布订阅模式实现LazyMan</title>
+      <link>/zh-cn/posts/javascripts/lazy_man/</link>
+      <pubDate>Fri, 30 Jul 2021 20:34:36 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/lazy_man/</guid>
+      <description>&lt;p&gt;使用发布订阅模式实现LazyMan的链式调用&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
