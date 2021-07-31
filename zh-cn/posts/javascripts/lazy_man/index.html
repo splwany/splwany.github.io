@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="发布订阅模式实现LazyMan">
 <meta itemprop="description" content="使用发布订阅模式实现LazyMan的链式调用"><meta itemprop="datePublished" content="2021-07-30T20:34:36&#43;08:00" />
 <meta itemprop="dateModified" content="2021-07-30T20:34:36&#43;08:00" />
-<meta itemprop="wordCount" content="519"><meta itemprop="image" content="/images/posts/javascripts/lazy_man/cover.png">
+<meta itemprop="wordCount" content="605"><meta itemprop="image" content="/images/posts/javascripts/lazy_man/cover.png">
 <meta itemprop="keywords" content="发布订阅,链式调用," /><meta property="og:title" content="发布订阅模式实现LazyMan" />
 <meta property="og:description" content="使用发布订阅模式实现LazyMan的链式调用" />
 <meta property="og:type" content="article" />
@@ -163,7 +163,10 @@
         <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
         <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span> <span style="color:#f92672">=</span> [];
         <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">subscribe</span>(<span style="color:#e6db74">&#39;lazyMan&#39;</span>, <span style="color:#a6e22e">name</span>);
-        <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>());
+        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+            <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>.<span style="color:#a6e22e">reverse</span>();
+            <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>();
+        });
     }
 
     <span style="color:#ae81ff">_</span><span style="color:#a6e22e">subscribe</span>(<span style="color:#a6e22e">msg</span>, ...<span style="color:#a6e22e">args</span>) {
@@ -173,7 +176,7 @@
 
     <span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>() {
         <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
-            <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">run</span>(<span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>.<span style="color:#a6e22e">shift</span>());
+            <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">run</span>(<span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>.<span style="color:#a6e22e">pop</span>());
         }
     }
 
@@ -183,11 +186,11 @@
             <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;lazyMan&#39;</span><span style="color:#f92672">:</span>
                 <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">lazyMan</span>(...<span style="color:#a6e22e">args</span>);
                 <span style="color:#66d9ef">break</span>;
-            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;eat&#39;</span><span style="color:#f92672">:</span>
-                <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">eat</span>(...<span style="color:#a6e22e">args</span>);
-                <span style="color:#66d9ef">break</span>;
             <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;sleep&#39;</span><span style="color:#f92672">:</span>
                 <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">sleep</span>(...<span style="color:#a6e22e">args</span>);
+                <span style="color:#66d9ef">break</span>;
+            <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;eat&#39;</span><span style="color:#f92672">:</span>
+                <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">eat</span>(...<span style="color:#a6e22e">args</span>);
                 <span style="color:#66d9ef">break</span>;
             <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
                 <span style="color:#66d9ef">break</span>;
@@ -195,30 +198,26 @@
     }
 
     <span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">text</span>) {
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;运行输出：&#39;</span>, <span style="color:#a6e22e">text</span>);
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">prefix</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;运行输出：&#39;</span>;
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">prefix</span><span style="color:#e6db74">}${</span><span style="color:#a6e22e">text</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
     }
 
     <span style="color:#ae81ff">_</span><span style="color:#a6e22e">lazyMan</span>(<span style="color:#a6e22e">name</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`你好，</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">！`</span>);
-        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>();
-    }
-
-    <span style="color:#ae81ff">_</span><span style="color:#a6e22e">eat</span>(<span style="color:#a6e22e">name</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">正在吃</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">~`</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`你好，</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
         <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>();
     }
 
     <span style="color:#ae81ff">_</span><span style="color:#a6e22e">sleep</span>(<span style="color:#a6e22e">time</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">正在进行</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">time</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒睡眠...`</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">正在睡觉，预计</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">time</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒...`</span>);
         <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
-            <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">在</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">time</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒后醒了！`</span>);
+            <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">在</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">time</span><span style="color:#e6db74">}</span><span style="color:#e6db74">秒后醒了`</span>);
             <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>();
         }, <span style="color:#a6e22e">time</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
     }
 
-    <span style="color:#a6e22e">eat</span>(<span style="color:#a6e22e">name</span>) {
-        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">subscribe</span>(<span style="color:#e6db74">&#39;eat&#39;</span>, <span style="color:#a6e22e">name</span>);
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
+    <span style="color:#ae81ff">_</span><span style="color:#a6e22e">eat</span>(<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">正在吃</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">publish</span>();
     }
 
     <span style="color:#a6e22e">sleep</span>(<span style="color:#a6e22e">time</span>) {
@@ -231,11 +230,13 @@
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
     }
 
+    <span style="color:#a6e22e">eat</span>(<span style="color:#a6e22e">name</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">subscribe</span>(<span style="color:#e6db74">&#39;eat&#39;</span>, <span style="color:#a6e22e">name</span>);
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
+    }
+
     <span style="color:#a6e22e">showProcedure</span>() {
-        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">procedure</span> <span style="color:#f92672">=</span> [];
-        <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>.<span style="color:#a6e22e">forEach</span>(({<span style="color:#a6e22e">msg</span>, <span style="color:#a6e22e">args</span>}) =&gt; {
-            <span style="color:#a6e22e">procedure</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">msg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;, &#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>);
-        });
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">procedure</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>.<span style="color:#a6e22e">map</span>(({<span style="color:#a6e22e">msg</span>, <span style="color:#a6e22e">args</span>}) =&gt; <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">msg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;, &#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>);
         <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;事件流程：&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">procedure</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39; -&gt; &#39;</span>));
     }
 }
@@ -244,11 +245,13 @@
     <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#ae81ff">_</span><span style="color:#a6e22e">lazyMan</span>(<span style="color:#a6e22e">name</span>);
 }
 
+
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lm</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lazyMan</span>(<span style="color:#e6db74">&#39;魏鑫&#39;</span>);
-<span style="color:#a6e22e">lm</span>.<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;早饭&#39;</span>).<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;午饭&#39;</span>).<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">3</span>).<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;晚饭&#39;</span>).<span style="color:#a6e22e">sleepFirst</span>(<span style="color:#ae81ff">6</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;注册的事件：\n&#39;</span>, <span style="color:#a6e22e">lm</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">taskList</span>);
-<span style="color:#a6e22e">lm</span>.<span style="color:#a6e22e">showProcedure</span>();
-</code></pre></div></div><div class="post-copyright mb-4">
+<span style="color:#a6e22e">lm</span>.<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;早饭&#39;</span>).<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;午饭&#39;</span>).<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;晚饭&#39;</span>).<span style="color:#a6e22e">sleepFirst</span>(<span style="color:#ae81ff">8</span>);
+<span style="color:#a6e22e">lm</span>.<span style="color:#a6e22e">showProcedure</span>();  <span style="color:#75715e">// sleep(8) -&gt; eat(早饭) -&gt; sleep(1) -&gt; eat(午饭) -&gt; sleep(2) -&gt; eat(晚饭)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">lm</span>.<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;粑粑&#39;</span>).<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">3</span>).<span style="color:#a6e22e">eat</span>(<span style="color:#e6db74">&#39;奥里给&#39;</span>);
+<span style="color:#a6e22e">lm</span>.<span style="color:#a6e22e">showProcedure</span>();  <span style="color:#75715e">// sleep(8) -&gt; eat(早饭) -&gt; sleep(1) -&gt; eat(午饭) -&gt; sleep(2) -&gt; eat(晚饭) -&gt; eat(粑粑) -&gt; sleep(3) -&gt; eat(奥里给)
+</span></code></pre></div></div><div class="post-copyright mb-4">
   <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
 </div><div class="post-reward mb-4 text-center">
   <button type="button" class="btn btn-reward" data-bs-toggle="modal" data-bs-target="#rewardModal">
