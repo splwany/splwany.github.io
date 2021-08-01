@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="Promise.all 的并发限制">
 <meta itemprop="description" content="利用 Promise.race 实现对 Promise.all 的并发限制"><meta itemprop="datePublished" content="2021-08-01T14:21:12&#43;08:00" />
 <meta itemprop="dateModified" content="2021-08-01T14:21:12&#43;08:00" />
-<meta itemprop="wordCount" content="687">
+<meta itemprop="wordCount" content="712">
 <meta itemprop="keywords" content="Promise," /><meta property="og:title" content="Promise.all 的并发限制" />
 <meta property="og:description" content="利用 Promise.race 实现对 Promise.all 的并发限制" />
 <meta property="og:type" content="article" />
@@ -165,16 +165,15 @@
 <li>对比 <code>executing</code> 长度，如果长度大于等于限制，就用 <code>race</code> 等一个任务执行完，再递归调用 <code>queue</code>，如果没有超出限制，就直接递归调用 <code>queue</code></li>
 <li>最后，用 <code>Promise.all</code> 将 <code>result</code> 数组中的所有结果输入到 <code>then</code> 方法中，如果 <code>result</code> 中有失败的 <code>promise</code>，则会终止后续的 <code>promise</code></li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">limitPromise</span>(<span style="color:#a6e22e">promises</span>, <span style="color:#a6e22e">limit</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">limitPromise</span>(<span style="color:#a6e22e">promiseFnList</span>, <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">limit</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>) {
     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> [];  <span style="color:#75715e">// 存储所有的 Promise 任务
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">executing</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>();  <span style="color:#75715e">// 正在执行的 Promise 对象
-</span><span style="color:#75715e"></span>
-    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">queue</span>() {
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">start</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">queue</span> <span style="color:#f92672">=</span> () =&gt; {
         <span style="color:#75715e">// 边界条件：如果 promises 长度为 0，或 i 到达末尾，就返回一个空的 promise
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">promises</span>.<span style="color:#a6e22e">length</span>) <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>();
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">promiseFnList</span>.<span style="color:#a6e22e">length</span>) <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>();
         <span style="color:#75715e">// 拿到一个 promise并运行，设置运行完成后从 executing 集合中删除
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">promises</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>]().<span style="color:#66d9ef">finally</span>(() =&gt; <span style="color:#a6e22e">executing</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">p</span>));
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">promiseFnList</span>[<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>]().<span style="color:#66d9ef">finally</span>(() =&gt; <span style="color:#a6e22e">executing</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">p</span>));
         <span style="color:#75715e">// 将运行中的 promise 添加到 executing 集合
 </span><span style="color:#75715e"></span>        <span style="color:#a6e22e">executing</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">p</span>);
         <span style="color:#75715e">// 并同时添加到 result 数组
@@ -207,7 +206,7 @@
 }
 
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">promises</span> <span style="color:#f92672">=</span> [
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">promiseFnList</span> <span style="color:#f92672">=</span> [
     <span style="color:#a6e22e">fakePromise</span>(<span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">false</span>),
     <span style="color:#a6e22e">fakePromise</span>(<span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#ae81ff">3</span>),
     <span style="color:#a6e22e">fakePromise</span>(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#ae81ff">2</span>),
@@ -220,7 +219,8 @@
     <span style="color:#a6e22e">fakePromise</span>(<span style="color:#e6db74">&#39;10&#39;</span>, <span style="color:#ae81ff">1</span>),
 ];
 
-<span style="color:#a6e22e">limitPromise</span>(<span style="color:#a6e22e">promises</span>, <span style="color:#ae81ff">3</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>), <span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>));
+<span style="color:#75715e">// 从下标为 3 的项开始，最大并发数为 3
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">limitPromise</span>(<span style="color:#a6e22e">promiseFnList</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">res</span>), <span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>));
 </code></pre></div></div><div class="post-copyright mb-4">
   <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
 </div><div class="post-reward mb-4 text-center">
