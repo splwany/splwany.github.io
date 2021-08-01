@@ -6,14 +6,23 @@
     <description>Recent content in 前端 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 01 Aug 2021 14:21:12 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Aug 2021 15:56:02 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>手写实现 Promise.all 和 Promise.race</title>
+      <link>/zh-cn/posts/javascripts/promise_all_race/</link>
+      <pubDate>Sun, 01 Aug 2021 15:56:02 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/promise_all_race/</guid>
+      <description>&lt;p&gt;自己实现 &lt;code&gt;Promise.all()&lt;/code&gt; 和 &lt;code&gt;Promise.race()&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Promise.all 的并发限制</title>
       <link>/zh-cn/posts/javascripts/promise_all_limit/</link>
       <pubDate>Sun, 01 Aug 2021 14:21:12 +0800</pubDate>
       
       <guid>/zh-cn/posts/javascripts/promise_all_limit/</guid>
-      <description>&lt;p&gt;利用 Promise.race 实现对 Promise.all 的并发限制&lt;/p&gt;</description>
+      <description>&lt;p&gt;利用 &lt;code&gt;Promise.race&lt;/code&gt; 实现对 &lt;code&gt;Promise.all&lt;/code&gt; 的并发限制&lt;/p&gt;</description>
     </item>
     
     <item>
