@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/zh-cn/posts/javascripts/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <loc>/zh-cn/posts/javascripts/big_int_sum/</loc>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
   </url><url>
-    <loc>/zh-cn/tags/promise/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <loc>/zh-cn/posts/javascripts/</loc>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -27,7 +27,7 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -44,11 +44,8 @@
                 href="/zh-cn/categories/"
                 />
   </url><url>
-    <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
-  </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -65,14 +62,14 @@
                 href="/zh-cn/"
                 />
   </url><url>
-    <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <loc>/zh-cn/tags/%E5%A4%A7%E6%95%B0%E6%B1%82%E5%92%8C/</loc>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
   </url><url>
-    <loc>/zh-cn/posts/javascripts/promise_all_race/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -90,7 +87,7 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/</loc>
-    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -106,6 +103,18 @@
                 hreflang="zh-cn"
                 href="/zh-cn/tags/"
                 />
+  </url><url>
+    <loc>/zh-cn/series/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-08-13T01:10:49+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/tags/promise/</loc>
+    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/promise_all_race/</loc>
+    <lastmod>2021-08-01T15:56:02+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/javascripts/promise_all_limit/</loc>
     <lastmod>2021-08-01T14:21:12+08:00</lastmod>
@@ -150,9 +159,6 @@
     <lastmod>2021-07-03T15:17:25+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/javascripts/bi_tree_leftrightview/</loc>
-    <lastmod>2021-07-03T15:17:25+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/series/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-07-03T15:17:25+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/tags/android/</loc>

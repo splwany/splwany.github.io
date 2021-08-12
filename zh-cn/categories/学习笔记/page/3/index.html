@@ -137,6 +137,17 @@
   <div class="container"><nav class="row" aria-label="breadcrumb">
   <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/categories/">分类</a></li><li class="breadcrumb-item active">学习笔记</li></ol>
 </nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/prototype_chain/">JavaScript继承、原型和原型链</a></h2><div class="post-meta mb-3">
+  <span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-22
+  </span>
+  <span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
+  </span>
+<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/javascript/" class="post-taxonomy">#JavaScript</a><a href="/zh-cn/tags/prototype/" class="post-taxonomy">#prototype</a><a href="/zh-cn/tags/%E7%BB%A7%E6%89%BF/" class="post-taxonomy">#继承</a><a href="/zh-cn/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" class="post-taxonomy">#原型链</a><a href="/zh-cn/tags/es5/" class="post-taxonomy">#ES5</a><a href="/zh-cn/tags/es6/" class="post-taxonomy">#ES6</a></div>
+<div class="post-summary mb-3"><p>JavaScript中的继承、原型、原型链，以及类的创建</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
         <h2 class="post-title mb-4"><a href="/zh-cn/posts/webnotes/learn_vue/">学习VUE</a></h2><div class="post-meta mb-3">
   <span class="post-date me-2">
     <i class="fas fa-fw fa-calendar-alt"></i>2021-05-20
@@ -182,17 +193,6 @@
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/python/" class="post-taxonomy">#python</a><a href="/zh-cn/tags/dataclasses/" class="post-taxonomy">#dataclasses</a><a href="/zh-cn/tags/namedtuple/" class="post-taxonomy">#namedtuple</a><a href="/zh-cn/tags/threading/" class="post-taxonomy">#threading</a><a href="/zh-cn/tags/logging/" class="post-taxonomy">#logging</a></div>
 <div class="post-summary mb-3"><p>Python的一些使用技巧和有趣的库</p></div>
       </div>
-    </article><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/webnotes/learn_html/">学习HTML</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-05
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/html/" class="post-taxonomy">#HTML</a></div>
-<div class="post-summary mb-3"><p>MDN文档的HTML学习笔记</p></div>
-      </div>
     </article></div><div class="row table-responsive mb-3">
 <ul class="pagination">
   <li class="page-item">
@@ -210,11 +210,14 @@
   <li class="page-item active">
     <a class="page-link" href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/3/">3</a>
   </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  <li class="page-item">
+    <a class="page-link" href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/4/">4</a>
   </li>
   <li class="page-item">
-    <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/4/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
@@ -230,14 +233,14 @@
     <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
 </section><section class="recent-posts row surface">
   <h4>最近文章</h4>
-  <ul><li><a href="/zh-cn/posts/javascripts/promise_all_race/">手写实现 Promise.all 和 Promise.race</a></li><li><a href="/zh-cn/posts/javascripts/promise_all_limit/">Promise.all 的并发限制</a></li><li><a href="/zh-cn/posts/javascripts/lazy_man/">发布订阅模式实现LazyMan</a></li><li><a href="/zh-cn/posts/webnotes/async_load_script/">异步加载网络js脚本并返回Promise</a></li><li><a href="/zh-cn/posts/webnotes/orientation/">网页重力感应</a></li></ul>
+  <ul><li><a href="/zh-cn/posts/javascripts/big_int_sum/">Big_int_sum</a></li><li><a href="/zh-cn/posts/javascripts/promise_all_race/">手写实现 Promise.all 和 Promise.race</a></li><li><a href="/zh-cn/posts/javascripts/promise_all_limit/">Promise.all 的并发限制</a></li><li><a href="/zh-cn/posts/javascripts/lazy_man/">发布订阅模式实现LazyMan</a></li><li><a href="/zh-cn/posts/webnotes/async_load_script/">异步加载网络js脚本并返回Promise</a></li></ul>
 </section>
 <section class="taxonomy-categories row surface">
   <h4>
     <a href="/zh-cn/categories">分类</a>
   </h4>
   <div><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
-      学习笔记 <span class="badge rounded-pill">15</span>
+      学习笔记 <span class="badge rounded-pill">16</span>
     </a><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
       Shortcode <span class="badge rounded-pill">9</span>
     </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
@@ -251,12 +254,12 @@
       前端 <span class="badge rounded-pill">12</span>
     </a><a href="/zh-cn/series/deep-learning/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="deep learning">
       deep learning <span class="badge rounded-pill">2</span>
+    </a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="算法">
+      算法 <span class="badge rounded-pill">2</span>
     </a><a href="/zh-cn/series/python/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="python">
       python <span class="badge rounded-pill">1</span>
     </a><a href="/zh-cn/series/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="用户手册">
       用户手册 <span class="badge rounded-pill">1</span>
-    </a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="算法">
-      算法 <span class="badge rounded-pill">1</span>
     </a></div>
 </section><section class="taxonomy-tags row surface">
   <h4>

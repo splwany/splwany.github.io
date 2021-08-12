@@ -6,7 +6,16 @@
     <description>Recent content in JavaScript笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 01 Aug 2021 15:56:02 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Aug 2021 01:10:49 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Big_int_sum</title>
+      <link>/zh-cn/posts/javascripts/big_int_sum/</link>
+      <pubDate>Fri, 13 Aug 2021 01:10:49 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/big_int_sum/</guid>
+      <description>&lt;p&gt;大数求和，支持负数&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>手写实现 Promise.all 和 Promise.race</title>
       <link>/zh-cn/posts/javascripts/promise_all_race/</link>
