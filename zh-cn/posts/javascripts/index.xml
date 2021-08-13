@@ -6,7 +6,16 @@
     <description>Recent content in JavaScript笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 13 Aug 2021 01:10:49 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Aug 2021 22:45:51 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>农场主牛牛（数组往返计数）</title>
+      <link>/zh-cn/posts/javascripts/farmer_nn/</link>
+      <pubDate>Fri, 13 Aug 2021 22:45:51 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/farmer_nn/</guid>
+      <description>&lt;p&gt;有一列耕地，分为 n 块，m 肥料，往返于这 n 块地，一次放 1 肥料，肥料放完为止，返回每块地中的肥料数&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>大数求和</title>
       <link>/zh-cn/posts/javascripts/big_int_sum/</link>
