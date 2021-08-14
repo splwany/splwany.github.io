@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="大数求和">
 <meta itemprop="description" content="大数求和，支持负数"><meta itemprop="datePublished" content="2021-08-13T01:10:49&#43;08:00" />
 <meta itemprop="dateModified" content="2021-08-13T01:10:49&#43;08:00" />
-<meta itemprop="wordCount" content="456">
+<meta itemprop="wordCount" content="939">
 <meta itemprop="keywords" content="" /><meta property="og:title" content="大数求和" />
 <meta property="og:description" content="大数求和，支持负数" />
 <meta property="og:type" content="article" />
@@ -148,14 +148,23 @@
     <i class="fas fa-fw fa-calendar-alt"></i>2021-08-13
   </span>
   <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
   </span>
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy">#算法</a></div>
 <div class="post-content mb-3"><p>大数求和，支持负数</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 将除负号外的数比大小，将大的放在第一个位置，并返回。第三个位置表示两个数除符号外是否相等
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">biggerFirst</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">aSym</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">bSym</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;-&#39;</span>) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 比较大小
+</span><span style="color:#75715e"> * @param {string} a 数字 a
+</span><span style="color:#75715e"> * @param {string} b 数字 b
+</span><span style="color:#75715e"> * @returns 去掉符号后，较大的在前，较小的在后，如果相等则位置三为 true [[biggerSym, bigger], [smallerSym, smaller], isEqual]
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">biggerFirst</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+    <span style="color:#75715e">// 思路：
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   保存两个数字的符号
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   数字转数组，比较两个数大小，先根据长度比，长的更大，如果长度一致，就按位比
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   较大的在前，较小的在后，如果一样大则第三个位置为 true。组成一个数组作为返回值
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">aSym</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">bSym</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;  <span style="color:#75715e">// a 和 b 的符号
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;-&#39;</span>) {
         <span style="color:#a6e22e">aSym</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-&#39;</span>;
         <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#ae81ff">1</span>);
     }
@@ -163,77 +172,68 @@
         <span style="color:#a6e22e">bSym</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-&#39;</span>;
         <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#ae81ff">1</span>);
     }
-
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">flag</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;  <span style="color:#75715e">// 0 代表 a 更小，1 代表 a 更大，2 代表一样
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span>) <span style="color:#a6e22e">flag</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span>) {
-        <span style="color:#a6e22e">flag</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#66d9ef">continue</span>;
-            <span style="color:#a6e22e">flag</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>;
-            <span style="color:#66d9ef">break</span>;
-        }
+    <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+    <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">equal</span> <span style="color:#f92672">=</span> () =&gt; [[<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">a</span>], [<span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">b</span>], <span style="color:#66d9ef">true</span>];
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">big</span> <span style="color:#f92672">=</span> () =&gt; [[<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">a</span>], [<span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">b</span>], <span style="color:#66d9ef">false</span>];
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">small</span> <span style="color:#f92672">=</span> () =&gt; [[<span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">b</span>], [<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">a</span>], <span style="color:#66d9ef">false</span>];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">big</span>();
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">small</span>();
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">small</span>();
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">big</span>();
+        <span style="color:#66d9ef">continue</span>;
     }
-
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">flag</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
-        [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">a</span>];
-        [<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">bSym</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">aSym</span>];
-    }
-
-    <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">flag</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2</span>];
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">equal</span>();
 }
 
-<span style="color:#75715e">// 将两个数长度对齐，短的数前方用 0 补齐
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setSameLength</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">maxLength</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span>);
-    <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">padStart</span>(<span style="color:#a6e22e">maxLength</span>, <span style="color:#ae81ff">0</span>);
-    <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">padStart</span>(<span style="color:#a6e22e">maxLength</span>, <span style="color:#ae81ff">0</span>);
-    <span style="color:#66d9ef">return</span> [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>];
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 大数求和（支持负数）
+</span><span style="color:#75715e"> * @param {string} s 第一个数字
+</span><span style="color:#75715e"> * @param {string} t 第二个数字
+</span><span style="color:#75715e"> * @returns 两数之和
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">t</span>) {
+    <span style="color:#75715e">// 思路
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   比较两个数去符号后的大小，大的在前小的在后，如果一样大且符号不同，直接返回 0
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   两种情况：
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     1. 符号相同（同正或同负），则两数相加，结果的符号与较大数的符号一致
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     2. 符号不同（一正一负），则大的减小的，结果的符号与较大数的符号一致
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   所以，可以把两种情况合并，把不同处提前定义好。比如：
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     1. 两数相加和相减的不同，可以提前根据符号是否相同来确定 sym 为 -1 还是 1
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     2. 相加和相减的进位条件不同，通过 updateCarry 函数确定判断条件并更新 carry 的值
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//     3. carry 取余的差异，可以通过加 10 再取余，解决相加和相减两种情况中取余的差异
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   最后用正则表达式将结果前面的 0 去掉，再根据较大数的符号来决定结果是否需要加负号
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   返回结果
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">const</span> [[<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">a</span>], [<span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">b</span>], <span style="color:#a6e22e">equal</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">biggerFirst</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">t</span>);  <span style="color:#75715e">// 大小比较，较大值优先
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isDiffSym</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aSym</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">bSym</span>;  <span style="color:#75715e">// 是否异号
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isDiffSym</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">equal</span>) <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;0&#39;</span>;  <span style="color:#75715e">// 异号且相等，直接返回 0
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">carry</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;  <span style="color:#75715e">// result 存储结果，carry 存储中间值和进位
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 进位更新函数，根据是否异号有两种更新方案
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">updateCarry</span> <span style="color:#f92672">=</span> (() =&gt; {
+        <span style="color:#75715e">// 因为 carry 是加过 10 的，所以判断条件都要加 10
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isDiffSym</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span> =&gt; <span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">?</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">c</span> =&gt; <span style="color:#a6e22e">c</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+    })();
+    <span style="color:#75715e">// 根据是否异号决定较小的数是加还是减
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sym</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isDiffSym</span> <span style="color:#f92672">?</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#75715e">// 两个数从个位开始计算，注意最后的进位
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">carry</span>) {
+        <span style="color:#a6e22e">carry</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#f92672">~~</span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">pop</span>() <span style="color:#f92672">+</span> <span style="color:#f92672">~~</span><span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">pop</span>() <span style="color:#f92672">*</span> <span style="color:#a6e22e">sym</span>;  <span style="color:#75715e">// ~表示按位取反，~~任何非数字都会得到 0，加 10 是为了模拟减法中的借位且不影响加法的取余
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">carry</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">result</span>;  <span style="color:#75715e">// 由于上一步加 10，因此此处加减法可以统一这么算
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">carry</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">updateCarry</span>(<span style="color:#a6e22e">carry</span>);  <span style="color:#75715e">// 更新进位
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#75715e">// 将结果前面的 0 去掉
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^0+([1-9])/</span>, <span style="color:#e6db74">&#39;$1&#39;</span>);
+    <span style="color:#75715e">// 结果的符号与较大数符号一致
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">aSym</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;-&#39;</span>) <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">result</span>;
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
 }
 
-<span style="color:#75715e">// 求和
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
-    <span style="color:#75715e">// 四种情况：
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   如果都是负，就相加，最后加负号
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   如果都是正，就相加，最后无负号
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   如果又大又负，就大减小，最后加负号
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   如果又小又负，就大减小，最后无负号
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">bSym</span>;
-    [<span style="color:#a6e22e">aSym</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">bSym</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">equal</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">biggerFirst</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>);
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">equal</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">aSym</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">bSym</span>) <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;0&#39;</span>;
-    [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">setSameLength</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>);
-    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">aArr</span>, <span style="color:#a6e22e">bArr</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; parseInt(<span style="color:#a6e22e">item</span>)), <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;&#39;</span>).<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; parseInt(<span style="color:#a6e22e">item</span>))];
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">num2</span>;
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">pre</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">curSum</span>;
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">aSym</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">bSym</span>) {
-        <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">aArr</span>.<span style="color:#a6e22e">length</span>) {
-            <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aArr</span>.<span style="color:#a6e22e">pop</span>();
-            <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bArr</span>.<span style="color:#a6e22e">pop</span>();
-            <span style="color:#a6e22e">curSum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">num2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">pre</span>;
-            <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">curSum</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>;
-            <span style="color:#a6e22e">pre</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">curSum</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
-        }
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">pre</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>;
-    } <span style="color:#66d9ef">else</span> {
-        <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">aArr</span>.<span style="color:#a6e22e">length</span>) {
-            <span style="color:#a6e22e">num1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aArr</span>.<span style="color:#a6e22e">pop</span>();
-            <span style="color:#a6e22e">num2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bArr</span>.<span style="color:#a6e22e">pop</span>();
-            <span style="color:#a6e22e">curSum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">num1</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">num2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">pre</span>;
-            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">curSum</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
-                <span style="color:#a6e22e">curSum</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">10</span>;
-                <span style="color:#a6e22e">pre</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-            } <span style="color:#66d9ef">else</span> {
-                <span style="color:#a6e22e">pre</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-            }
-            <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">curSum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>;
-        }
-    }
-    <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/^0+/</span>, <span style="color:#e6db74">&#39;&#39;</span>);
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">aSym</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;-&#39;</span>) <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sum</span>;
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sum</span>;
-}
-
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#e6db74">&#39;-900010&#39;</span>, <span style="color:#e6db74">&#39;900000&#39;</span>));
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#e6db74">&#39;-90010&#39;</span>, <span style="color:#e6db74">&#39;90000&#39;</span>));
 </code></pre></div></div><div class="post-copyright mb-4">
   <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
 </div><div class="post-reward mb-4 text-center">
