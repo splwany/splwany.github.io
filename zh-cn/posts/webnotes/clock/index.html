@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="动态钟表">
 <meta itemprop="description" content="实现一个动态改变的钟表"><meta itemprop="datePublished" content="2021-08-14T18:35:33&#43;08:00" />
 <meta itemprop="dateModified" content="2021-08-14T18:35:33&#43;08:00" />
-<meta itemprop="wordCount" content="887"><meta itemprop="image" content="/images/posts/webnotes/clock/header.png">
+<meta itemprop="wordCount" content="888"><meta itemprop="image" content="/images/posts/webnotes/clock/header.png">
 <meta itemprop="keywords" content="CSS,requestAnimationFrame," /><meta property="og:title" content="动态钟表" />
 <meta property="og:description" content="实现一个动态改变的钟表" />
 <meta property="og:type" content="article" />
@@ -173,13 +173,15 @@
 </div><div class="post-content mb-3"><p>实现一个动态改变的钟表</p>
 <h2 id="效果如下">效果如下</h2>
 <style>
+    body {
+        margin: 0;
+    }
     .column {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
     .clock {
         position: relative;
         width: 40vw;
@@ -190,7 +192,6 @@
         overflow: hidden;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
     }
-
     .time {
         position: absolute;
         top: 20%;
@@ -201,7 +202,6 @@
         border-radius: 0.7vw;
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.349);
     }
-
     .plant {
         position: relative;
         width: 100%;
@@ -209,7 +209,6 @@
         border-radius: 50%;
         filter: drop-shadow(0.5vw 0.4vw 0.4vw rgba(0, 0, 0, 0.2));
     }
-
     .plant::after {
         content: "";
         position: absolute;
@@ -221,7 +220,6 @@
         border: 0.35vw solid rgb(129, 129, 129);
         background-color: rgb(236, 236, 236);
     }
-
     .hour,
     .minute,
     .second {
@@ -233,14 +231,11 @@
         background-color: rgb(70, 70, 70);
         transform: rotate(-90deg);
         transform-origin: 0% 50%;
-        transition: transform 400ms ease-in-out;
     }
-
     .minute {
         width: 15vw;
         height: 0.4vw;
     }
-
     .second {
         width: 17vw;
         height: 0.3vw;
