@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="动态钟表">
 <meta itemprop="description" content="实现一个动态改变的钟表"><meta itemprop="datePublished" content="2021-08-14T18:35:33&#43;08:00" />
 <meta itemprop="dateModified" content="2021-08-14T18:35:33&#43;08:00" />
-<meta itemprop="wordCount" content="888"><meta itemprop="image" content="/images/posts/webnotes/clock/header.png">
+<meta itemprop="wordCount" content="887"><meta itemprop="image" content="/images/posts/webnotes/clock/header.png">
 <meta itemprop="keywords" content="CSS,requestAnimationFrame," /><meta property="og:title" content="动态钟表" />
 <meta property="og:description" content="实现一个动态改变的钟表" />
 <meta property="og:type" content="article" />
@@ -173,14 +173,14 @@
 </div><div class="post-content mb-3"><p>实现一个动态改变的钟表</p>
 <h2 id="效果如下">效果如下</h2>
 <style>
-    body {
-        margin: 0;
-    }
     .column {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .container {
+        margin: 20px 0;
     }
     .clock {
         position: relative;
@@ -212,8 +212,8 @@
     .plant::after {
         content: "";
         position: absolute;
-        top: calc(50% - 1.35vw);
-        left: calc(50% - 1.35vw);
+        top: calc(50% - 1.3vw);
+        left: calc(50% - 1.3vw);
         width: 2vw;
         height: 2vw;
         border-radius: 50%;
@@ -273,9 +273,9 @@
             }
         );
     })();
-    window.onload = function () {
+    document.addEventListener('DOMContentLoaded", function() {
         startClock();
-    };
+    });
     const toggleClock = (function() {
         let state = true;
         return function() {
