@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="动态钟表">
 <meta itemprop="description" content="实现一个动态改变的钟表"><meta itemprop="datePublished" content="2021-08-14T18:35:33&#43;08:00" />
 <meta itemprop="dateModified" content="2021-08-14T18:35:33&#43;08:00" />
-<meta itemprop="wordCount" content="887"><meta itemprop="image" content="/images/posts/webnotes/clock/header.png">
+<meta itemprop="wordCount" content="883"><meta itemprop="image" content="/images/posts/webnotes/clock/header.png">
 <meta itemprop="keywords" content="CSS,requestAnimationFrame," /><meta property="og:title" content="动态钟表" />
 <meta property="og:description" content="实现一个动态改变的钟表" />
 <meta property="og:type" content="article" />
@@ -212,8 +212,8 @@
     .plant::after {
         content: "";
         position: absolute;
-        top: calc(50% - 1.3vw);
-        left: calc(50% - 1.3vw);
+        top: calc(50% - 1vw);
+        left: calc(50% - 1vw);
         width: 2vw;
         height: 2vw;
         border-radius: 50%;
@@ -273,9 +273,7 @@
             }
         );
     })();
-    document.addEventListener('DOMContentLoaded", function() {
-        startClock();
-    });
+    startClock();
     const toggleClock = (function() {
         let state = true;
         return function() {
