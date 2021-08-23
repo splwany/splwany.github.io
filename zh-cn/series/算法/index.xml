@@ -6,7 +6,16 @@
     <description>Recent content in 算法 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 13 Aug 2021 22:45:51 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 23:51:39 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数组拍平的两种方式</title>
+      <link>/zh-cn/posts/javascripts/flatten/</link>
+      <pubDate>Mon, 23 Aug 2021 23:51:39 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/flatten/</guid>
+      <description>&lt;p&gt;将数组拍平，第二个参数定义深度&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>农场主牛牛（数组往返计数）</title>
       <link>/zh-cn/posts/javascripts/farmer_nn/</link>

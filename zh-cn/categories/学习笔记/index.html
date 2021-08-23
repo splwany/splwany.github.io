@@ -136,7 +136,18 @@
 <div class="col-lg-8">
   <div class="container"><nav class="row" aria-label="breadcrumb">
   <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/categories/">分类</a></li><li class="breadcrumb-item active">学习笔记</li></ol>
-</nav><div class="posts mb-4"><article class="post row surface"><div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
+</nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/flatten/">数组拍平的两种方式</a></h2><div class="post-meta mb-3">
+  <span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-08-23
+  </span>
+  <span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy">#算法</a></div>
+<div class="post-summary mb-3"><p>将数组拍平，第二个参数定义深度</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
         <img class="img-fluid" src="/images/posts/webnotes/clock/header.png" loading="lazy"/>
       </div><div class="post-body col-md-9">
         <h2 class="post-title mb-4"><a href="/zh-cn/posts/webnotes/clock/">动态钟表</a></h2><div class="post-meta mb-3">
@@ -182,17 +193,6 @@
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/promise/" class="post-taxonomy">#Promise</a></div>
 <div class="post-summary mb-3"><p>自己实现 <code>Promise.all()</code> 和 <code>Promise.race()</code></p></div>
       </div>
-    </article><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/promise_all_limit/">Promise.all 的并发限制</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-08-01
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/promise/" class="post-taxonomy">#Promise</a></div>
-<div class="post-summary mb-3"><p>利用 <code>Promise.race</code> 实现对 <code>Promise.all</code> 的并发限制</p></div>
-      </div>
     </article></div><div class="row table-responsive mb-3">
 <ul class="pagination">
   <li class="page-item">
@@ -233,14 +233,14 @@
     <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
 </section><section class="recent-posts row surface">
   <h4>最近文章</h4>
-  <ul><li><a href="/zh-cn/posts/webnotes/clock/">动态钟表</a></li><li><a href="/zh-cn/posts/javascripts/farmer_nn/">农场主牛牛（数组往返计数）</a></li><li><a href="/zh-cn/posts/javascripts/big_int_sum/">大数求和</a></li><li><a href="/zh-cn/posts/javascripts/promise_all_race/">手写实现 Promise.all 和 Promise.race</a></li><li><a href="/zh-cn/posts/javascripts/promise_all_limit/">Promise.all 的并发限制</a></li></ul>
+  <ul><li><a href="/zh-cn/posts/javascripts/flatten/">数组拍平的两种方式</a></li><li><a href="/zh-cn/posts/webnotes/clock/">动态钟表</a></li><li><a href="/zh-cn/posts/javascripts/farmer_nn/">农场主牛牛（数组往返计数）</a></li><li><a href="/zh-cn/posts/javascripts/big_int_sum/">大数求和</a></li><li><a href="/zh-cn/posts/javascripts/promise_all_race/">手写实现 Promise.all 和 Promise.race</a></li></ul>
 </section>
 <section class="taxonomy-categories row surface">
   <h4>
     <a href="/zh-cn/categories">分类</a>
   </h4>
   <div><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
-      学习笔记 <span class="badge rounded-pill">18</span>
+      学习笔记 <span class="badge rounded-pill">19</span>
     </a><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
       Shortcode <span class="badge rounded-pill">9</span>
     </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
@@ -253,7 +253,7 @@
   <div><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="前端">
       前端 <span class="badge rounded-pill">13</span>
     </a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="算法">
-      算法 <span class="badge rounded-pill">3</span>
+      算法 <span class="badge rounded-pill">4</span>
     </a><a href="/zh-cn/series/deep-learning/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="deep learning">
       deep learning <span class="badge rounded-pill">2</span>
     </a><a href="/zh-cn/series/python/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="python">
