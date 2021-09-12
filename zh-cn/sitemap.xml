@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/zh-cn/posts/javascripts/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -24,7 +24,7 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -41,8 +41,11 @@
                 href="/zh-cn/categories/"
                 />
   </url><url>
+    <loc>/zh-cn/posts/javascripts/symmetric_binary_tree/</loc>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
+  </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -60,13 +63,10 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/javascripts/flatten/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-08-23T23:51:39+08:00</lastmod>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -84,6 +84,9 @@
                 />
   </url><url>
     <loc>/zh-cn/series/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-09-12T21:36:59+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/flatten/</loc>
     <lastmod>2021-08-23T23:51:39+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/tags/css/</loc>
