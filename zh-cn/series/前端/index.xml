@@ -6,7 +6,16 @@
     <description>Recent content in 前端 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 14 Aug 2021 18:35:33 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Sep 2021 22:21:03 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Proxy实现Object的安全取值（另附 Python 写法）</title>
+      <link>/zh-cn/posts/javascripts/proxy_object/</link>
+      <pubDate>Tue, 14 Sep 2021 22:21:03 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/proxy_object/</guid>
+      <description>&lt;p&gt;给定一个 Object，实现一个代理函数，使得取值安全，且在末端使用函数调用的方式传入默认值&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>动态钟表</title>
       <link>/zh-cn/posts/webnotes/clock/</link>
