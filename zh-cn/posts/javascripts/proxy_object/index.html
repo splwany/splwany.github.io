@@ -11,7 +11,7 @@
 <meta name="description" content="" /><meta itemprop="name" content="使用Proxy实现Object的安全取值（另附 Python 写法）">
 <meta itemprop="description" content="给定一个 Object，实现一个代理函数，使得取值安全，且在末端使用函数调用的方式传入默认值"><meta itemprop="datePublished" content="2021-09-14T22:21:03&#43;08:00" />
 <meta itemprop="dateModified" content="2021-09-14T22:21:03&#43;08:00" />
-<meta itemprop="wordCount" content="252">
+<meta itemprop="wordCount" content="245">
 <meta itemprop="keywords" content="编程技巧," /><meta property="og:title" content="使用Proxy实现Object的安全取值（另附 Python 写法）" />
 <meta property="og:description" content="给定一个 Object，实现一个代理函数，使得取值安全，且在末端使用函数调用的方式传入默认值" />
 <meta property="og:type" content="article" />
@@ -154,14 +154,12 @@
 <div class="post-content mb-3"><p>给定一个 Object，实现一个代理函数，使得取值安全，且在末端使用函数调用的方式传入默认值</p>
 <h3 id="javascript-实现">JavaScript 实现</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dataProxy</span>(<span style="color:#a6e22e">data</span>) {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span> =&gt; <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">fn</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;undefined&#39;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">fn</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span>;
-    <span style="color:#a6e22e">fn</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dataType</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">data</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span> =&gt; <span style="color:#a6e22e">dataType</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;undefined&#39;</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>;
     <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Proxy(<span style="color:#a6e22e">fn</span>, {
         <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>, <span style="color:#a6e22e">property</span>) {
-            <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">target</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">target</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">property</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">target</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span>) {
-                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dataProxy</span>(<span style="color:#a6e22e">Reflect</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">target</span>.<span style="color:#ae81ff">_</span><span style="color:#a6e22e">dict</span>, <span style="color:#a6e22e">property</span>));
-            }
-            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dataProxy</span>();
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">dataType</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;undefined&#39;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dataProxy</span>();
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dataProxy</span>(<span style="color:#a6e22e">data</span>[<span style="color:#a6e22e">property</span>]);
         }
     });
 }
