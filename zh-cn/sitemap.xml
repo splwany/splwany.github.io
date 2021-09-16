@@ -2,11 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/zh-cn/posts/javascripts/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <loc>/zh-cn/posts/webnotes/chinese_flag/</loc>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/tags/css/</loc>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/tags/css/"
+                />
+  </url><url>
+    <loc>/zh-cn/posts/webnotes/</loc>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -23,11 +39,8 @@
                 href="/zh-cn/series/"
                 />
   </url><url>
-    <loc>/zh-cn/posts/javascripts/proxy_object/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
-  </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -45,10 +58,10 @@
                 />
   </url><url>
     <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -66,10 +79,10 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -87,7 +100,7 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/</loc>
-    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -104,6 +117,12 @@
                 href="/zh-cn/tags/"
                 />
   </url><url>
+    <loc>/zh-cn/posts/javascripts/</loc>
+    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/proxy_object/</loc>
+    <lastmod>2021-09-14T22:21:03+08:00</lastmod>
+  </url><url>
     <loc>/zh-cn/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2021-09-14T22:21:03+08:00</lastmod>
   </url><url>
@@ -116,23 +135,7 @@
     <loc>/zh-cn/posts/javascripts/flatten/</loc>
     <lastmod>2021-08-23T23:51:39+08:00</lastmod>
   </url><url>
-    <loc>/zh-cn/tags/css/</loc>
-    <lastmod>2021-08-14T18:35:33+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/tags/css/"
-                />
-  </url><url>
     <loc>/zh-cn/tags/requestanimationframe/</loc>
-    <lastmod>2021-08-14T18:35:33+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/webnotes/</loc>
     <lastmod>2021-08-14T18:35:33+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/webnotes/clock/</loc>

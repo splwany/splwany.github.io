@@ -6,7 +6,16 @@
     <description>Recent content in Web笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Sat, 14 Aug 2021 18:35:33 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Sep 2021 00:17:03 +0800</lastBuildDate><atom:link href="/zh-cn/posts/webnotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chinese_flag</title>
+      <link>/zh-cn/posts/webnotes/chinese_flag/</link>
+      <pubDate>Fri, 17 Sep 2021 00:17:03 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/webnotes/chinese_flag/</guid>
+      <description>&lt;p&gt;使用 CSS 画一个五星红旗&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>动态钟表</title>
       <link>/zh-cn/posts/webnotes/clock/</link>
