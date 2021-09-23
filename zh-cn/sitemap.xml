@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/zh-cn/posts/javascripts/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -24,7 +24,7 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -42,13 +42,10 @@
                 />
   </url><url>
     <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -66,10 +63,10 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -85,6 +82,12 @@
                 hreflang="zh-cn"
                 href="/zh-cn/posts/"
                 />
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/deepcopy/</loc>
+    <lastmod>2021-09-23T16:09:43+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/</loc>
+    <lastmod>2021-09-23T15:24:17+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/tags/</loc>
     <lastmod>2021-09-23T15:24:17+08:00</lastmod>

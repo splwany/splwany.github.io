@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JavaScript笔记 - 在下傲娇的泰迪</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>深拷贝 - 在下傲娇的泰迪</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
-<meta name="description" content="" /><meta itemprop="name" content="JavaScript笔记">
-<meta itemprop="description" content="博客简介"><meta property="og:title" content="JavaScript笔记" />
-<meta property="og:description" content="博客简介" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/zh-cn/posts/javascripts/" /><meta property="og:site_name" content="在下傲娇的泰迪" />
+<meta name="description" content="" /><meta itemprop="name" content="深拷贝">
+<meta itemprop="description" content="实现 JavaScript 的深拷贝"><meta itemprop="datePublished" content="2021-09-23T16:09:43&#43;08:00" />
+<meta itemprop="dateModified" content="2021-09-23T16:09:43&#43;08:00" />
+<meta itemprop="wordCount" content="271">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="深拷贝" />
+<meta property="og:description" content="实现 JavaScript 的深拷贝" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/zh-cn/posts/javascripts/deepcopy/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-23T16:09:43&#43;08:00" />
+<meta property="article:modified_time" content="2021-09-23T16:09:43&#43;08:00" /><meta property="og:site_name" content="在下傲娇的泰迪" />
+
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="JavaScript笔记"/>
-<meta name="twitter:description" content="博客简介"/>
+<meta name="twitter:title" content="深拷贝"/>
+<meta name="twitter:description" content="实现 JavaScript 的深拷贝"/>
 <meta name="twitter:site" content="@splwany"/>
-<link rel="alternate" type="application/rss+xml" href="/zh-cn/posts/javascripts/index.xml" title="在下傲娇的泰迪" /><meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.97335f0cf3f940376c6eec6badc4df62a97f49d84aabee004d2ed6597c382a1c.css" integrity="sha256-lzNfDPP5QDdsbuxrrcTfYql/SdhKq&#43;4ATS7WWXw4Khw=" crossorigin="anonymous"><script src="/js/bundle.min.4677dbbd77a04a89b5ef7561aaab10140c4b36afaee13799731212571d3cbff6.js" integrity="sha256-RnfbvXegSom173VhqqsQFAxLNq&#43;u4TeZcxISVx08v/Y=" crossorigin="anonymous"></script>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.97335f0cf3f940376c6eec6badc4df62a97f49d84aabee004d2ed6597c382a1c.css" integrity="sha256-lzNfDPP5QDdsbuxrrcTfYql/SdhKq&#43;4ATS7WWXw4Khw=" crossorigin="anonymous"><script src="/js/bundle.min.4677dbbd77a04a89b5ef7561aaab10140c4b36afaee13799731212571d3cbff6.js" integrity="sha256-RnfbvXegSom173VhqqsQFAxLNq&#43;u4TeZcxISVx08v/Y=" crossorigin="anonymous"></script>
 </head><body><header><nav class="navbar fixed-top navbar-expand-xl">
   <div class="container">
     <a class="navbar-brand" href="/zh-cn/">
@@ -135,9 +141,9 @@
       <div class="row content">
 <div class="col-lg-8">
   <div class="container"><nav class="row" aria-label="breadcrumb">
-  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/">文章</a></li><li class="breadcrumb-item active">JavaScript笔记</li></ol>
-</nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/deepcopy/">深拷贝</a></h2><div class="post-meta mb-3">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/">文章</a></li><li class="breadcrumb-item"><a href="/zh-cn/posts/javascripts/">JavaScript笔记</a></li><li class="breadcrumb-item active">深拷贝</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">深拷贝</h1><div class="post-meta mb-3">
   <span class="post-date me-2">
     <i class="fas fa-fw fa-calendar-alt"></i>2021-09-23
   </span>
@@ -145,80 +151,95 @@
     <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
   </span>
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a></div>
-<div class="post-summary mb-3"><p>实现 <code>JavaScript</code> 的深拷贝</p></div>
-      </div>
-    </article><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/regist_dispatch/">消息发布订阅的实现</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-09-23
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85/" class="post-taxonomy">#发布订阅</a></div>
-<div class="post-summary mb-3"><p>实现一个 <code>Message</code> 类，里面包含 <code>on</code> 和 <code>dispatch</code> 方法，实现消息的发布订阅</p></div>
-      </div>
-    </article><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/proxy_object/">使用Proxy实现Object的安全取值（另附 Python 写法）</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-09-14
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" class="post-taxonomy">#编程技巧</a></div>
-<div class="post-summary mb-3"><p>给定一个 Object，实现一个代理函数，使得取值安全，且在末端使用函数调用的方式传入默认值</p></div>
-      </div>
-    </article><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/symmetric_binary_tree/">判断对称二叉树</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-09-12
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy">#算法</a></div>
-<div class="post-summary mb-3"><p>根据前序和中序列表构造一个二叉树，然后判断二叉树是否是对称的</p></div>
-      </div>
-    </article><article class="post row surface"><div class="post-body">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/flatten/">数组拍平的两种方式</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-08-23
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy">#算法</a></div>
-<div class="post-summary mb-3"><p>将数组拍平，第二个参数定义深度</p></div>
-      </div>
-    </article></div><div class="row table-responsive mb-3">
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/zh-cn/posts/javascripts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/zh-cn/posts/javascripts/">1</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/zh-cn/posts/javascripts/page/2/">2</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/zh-cn/posts/javascripts/page/3/">3</a>
-  </li>
-  <li class="page-item">
-    <a href="/zh-cn/posts/javascripts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/zh-cn/posts/javascripts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
+<div class="post-content mb-3"><p>实现 <code>JavaScript</code> 的深拷贝</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 通过 `Object` 原型对象上的 `toString` 方法，配合正则表达式的分组功能，获取数据的真实类型
+</span><span style="color:#75715e">// Number BigInt String Boolean Symbol Undefined Null Object Array Promise Function 等等
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getType</span>(<span style="color:#a6e22e">data</span>) {
+    <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">toString</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">data</span>).<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\[object (\w+)\]/</span>)[<span style="color:#ae81ff">1</span>];
+}
 
-</div>
-</div>
-
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deepCopy</span>(<span style="color:#a6e22e">data</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dfs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span> =&gt; {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getType</span>(<span style="color:#a6e22e">d</span>);
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">type</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;Array&#39;</span>) {
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tmp</span> <span style="color:#f92672">=</span> [];
+            <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; {
+                <span style="color:#a6e22e">tmp</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">dfs</span>(<span style="color:#a6e22e">item</span>));
+            });
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tmp</span>;
+        }
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">type</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;Object&#39;</span>) {
+            <span style="color:#75715e">// 复制原对象的原型对象
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tmp</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(Object.<span style="color:#a6e22e">getPrototypeOf</span>(<span style="color:#a6e22e">d</span>));
+            <span style="color:#75715e">// getOwnPropertyNames 可以获得当前对象的所有属性，即使 enumerable 为 false
+</span><span style="color:#75715e"></span>            Object.<span style="color:#a6e22e">getOwnPropertyNames</span>(<span style="color:#a6e22e">d</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">key</span> =&gt; {
+                <span style="color:#75715e">// 获取当前属性的配置
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">discriptor</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">getOwnPropertyDescriptor</span>(<span style="color:#a6e22e">d</span>, <span style="color:#a6e22e">key</span>);
+                <span style="color:#75715e">// 将当前属性配置中的 value 改为深拷贝后的值
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">discriptor</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#a6e22e">discriptor</span>.<span style="color:#a6e22e">value</span>);
+                <span style="color:#75715e">// 在 tmp 中定义配置
+</span><span style="color:#75715e"></span>                Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">tmp</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">discriptor</span>);
+            });
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tmp</span>;
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">dfs</span>(<span style="color:#a6e22e">data</span>);
+}
+</code></pre></div><p><em>测试效果：</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;weixin&#39;</span>,
+    <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">25</span>]
+};
+<span style="color:#a6e22e">data</span>.<span style="color:#ae81ff">__</span><span style="color:#a6e22e">proto__</span>.<span style="color:#66d9ef">try</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {};
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">data</span>, <span style="color:#e6db74">&#39;age&#39;</span>, {<span style="color:#a6e22e">enumerable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">writable</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>});
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">copiedData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">deepCopy</span>(<span style="color:#a6e22e">data</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;原对象: &#39;</span>, <span style="color:#a6e22e">data</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;新对象: &#39;</span>, <span style="color:#a6e22e">copiedData</span>);
+</code></pre></div></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-bs-toggle="modal" data-bs-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.jpg" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/zh-cn/posts/javascripts/regist_dispatch/">消息发布订阅的实现</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"></div>
+</div></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="splwany/splwany.github.io"
+  issue-term="pathname"
+  label="comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
 </div><aside class="col-lg-4 sidebar d-flex">
   <div class="container"><section class="profile surface row">
   <div class="col-xl-6 d-flex align-items-center justify-content-center">
@@ -368,11 +389,7 @@
       <a class="nav-link social-link" target="_blank" href="https://www.zhihu.com/people/wei-xin-13-16" title="Zhihu">
         <i class="fab fa-fw fa-2x fa-zhihu"></i>
       </a>
-    </li><li class="nav-item">
-    <a class="nav-link social-link" target="_blank" href="/zh-cn/posts/javascripts/index.xml" title="RSS">
-      <i class="fas fa-fw fa-2x fa-rss"></i>
-    </a>
-  </li></nav>
+    </li></nav>
 <div class="copyright mb-2">
   Copyright © 2020-2021 Alan Wei. All Rights Reserved.
 </div>
