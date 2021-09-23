@@ -6,7 +6,16 @@
     <description>Recent content in 学习笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 17 Sep 2021 00:17:03 +0800</lastBuildDate><atom:link href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Sep 2021 15:24:17 +0800</lastBuildDate><atom:link href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>消息发布订阅的实现</title>
+      <link>/zh-cn/posts/javascripts/regist_dispatch/</link>
+      <pubDate>Thu, 23 Sep 2021 15:24:17 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/regist_dispatch/</guid>
+      <description>&lt;p&gt;实现一个 &lt;code&gt;Message&lt;/code&gt; 类，里面包含 &lt;code&gt;on&lt;/code&gt; 和 &lt;code&gt;dispatch&lt;/code&gt; 方法，实现消息的发布订阅&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>CSS 实现五星红旗</title>
       <link>/zh-cn/posts/webnotes/chinese_flag/</link>
