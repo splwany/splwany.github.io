@@ -6,7 +6,16 @@
     <description>Recent content in 前端 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 23 Sep 2021 16:09:43 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Oct 2021 17:14:53 +0800</lastBuildDate><atom:link href="/zh-cn/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript 单行代码合辑</title>
+      <link>/zh-cn/posts/javascripts/single_line_code/</link>
+      <pubDate>Fri, 15 Oct 2021 17:14:53 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/single_line_code/</guid>
+      <description>&lt;p&gt;单行代码能实现哪些功能&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>深拷贝</title>
       <link>/zh-cn/posts/javascripts/deepcopy/</link>
