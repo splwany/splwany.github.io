@@ -6,7 +6,16 @@
     <description>Recent content in JavaScript笔记 on 在下傲娇的泰迪</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2020-{year} Alan Wei. All Rights Reserved.</copyright>
-    <lastBuildDate>Fri, 15 Oct 2021 17:14:53 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 21:51:13 +0800</lastBuildDate><atom:link href="/zh-cn/posts/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生成随机色以及控制台彩色</title>
+      <link>/zh-cn/posts/javascripts/randomcolor_consolecolor/</link>
+      <pubDate>Sun, 17 Oct 2021 21:51:13 +0800</pubDate>
+      
+      <guid>/zh-cn/posts/javascripts/randomcolor_consolecolor/</guid>
+      <description>&lt;p&gt;随机生成 HEX 十六进制颜色，以及控制台打印彩色文字和样式效果&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>JavaScript 单行代码合辑</title>
       <link>/zh-cn/posts/javascripts/single_line_code/</link>

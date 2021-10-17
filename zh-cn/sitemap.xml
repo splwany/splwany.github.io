@@ -3,16 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/zh-cn/tags/javascript/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/javascripts/single_line_code/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/javascripts/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -30,7 +27,7 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -48,10 +45,10 @@
                 />
   </url><url>
     <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -69,10 +66,10 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -90,7 +87,7 @@
                 />
   </url><url>
     <loc>/zh-cn/tags/</loc>
-    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -106,6 +103,12 @@
                 hreflang="zh-cn"
                 href="/zh-cn/tags/"
                 />
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/randomcolor_consolecolor/</loc>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/single_line_code/</loc>
+    <lastmod>2021-10-15T17:14:53+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-10-10T00:08:23+08:00</lastmod>

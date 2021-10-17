@@ -137,6 +137,17 @@
   <div class="container"><nav class="row" aria-label="breadcrumb">
   <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/zh-cn/">主页</a></li><li class="breadcrumb-item"><a href="/zh-cn/series/">专栏</a></li><li class="breadcrumb-item active">前端</li></ol>
 </nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/zh-cn/posts/webnotes/async_load_script/">异步加载网络js脚本并返回Promise</a></h2><div class="post-meta mb-3">
+  <span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-07-25
+  </span>
+  <span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD/" class="post-taxonomy">#异步加载</a><a href="/zh-cn/tags/promise/" class="post-taxonomy">#Promise</a></div>
+<div class="post-summary mb-3"><p>手写实现从网络异步加载js脚本，并返回Promise实例，如果加载成功就执行resolve，失败或超时就执行reject。</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
         <h2 class="post-title mb-4"><a href="/zh-cn/posts/webnotes/orientation/">网页重力感应</a></h2><div class="post-meta mb-3">
   <span class="post-date me-2">
     <i class="fas fa-fw fa-calendar-alt"></i>2021-07-21
@@ -180,19 +191,6 @@
 <a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/vue/" class="post-taxonomy">#VUE</a></div>
 <div class="post-summary mb-3"><p>开课吧VUE体验课笔记</p></div>
       </div>
-    </article><article class="post row surface"><div class="post-thumbnail col-md-3 d-flex align-items-center justify-content-center">
-        <img class="img-fluid" src="/images/posts/javascripts/coroutine/cover.png" loading="lazy"/>
-      </div><div class="post-body col-md-9">
-        <h2 class="post-title mb-4"><a href="/zh-cn/posts/javascripts/coroutine/">JavaScript中的协程与生产者消费者模式</a></h2><div class="post-meta mb-3">
-  <span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-18
-  </span>
-  <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
-  </span>
-<a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy">#学习笔记</a><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy">#前端</a><a href="/zh-cn/tags/javascript/" class="post-taxonomy">#JavaScript</a><a href="/zh-cn/tags/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%BC%8F/" class="post-taxonomy">#生产者消费者模式</a><a href="/zh-cn/tags/%E5%8D%8F%E7%A8%8B/" class="post-taxonomy">#协程</a></div>
-<div class="post-summary mb-3"><p>JavaScript中的协程以及实现生产者消费者模式</p></div>
-      </div>
     </article></div><div class="row table-responsive mb-3">
 <ul class="pagination">
   <li class="page-item">
@@ -233,14 +231,14 @@
     <h5 class="profile-name my-2">Alan Wei</h5><div class="profile-bio mb-2">Student, Web developer.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>BJUT</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Beijing, China.</div></div>
 </section><section class="recent-posts row surface">
   <h4>最近文章</h4>
-  <ul><li><a href="/zh-cn/posts/javascripts/single_line_code/">JavaScript 单行代码合辑</a></li><li><a href="/zh-cn/posts/javascripts/lucky_number/">队尾幸运编号问题</a></li><li><a href="/zh-cn/posts/javascripts/deepcopy/">深拷贝</a></li><li><a href="/zh-cn/posts/javascripts/regist_dispatch/">消息发布订阅的实现</a></li><li><a href="/zh-cn/posts/webnotes/chinese_flag/">CSS 实现五星红旗</a></li></ul>
+  <ul><li><a href="/zh-cn/posts/javascripts/randomcolor_consolecolor/">生成随机色以及控制台彩色</a></li><li><a href="/zh-cn/posts/javascripts/single_line_code/">JavaScript 单行代码合辑</a></li><li><a href="/zh-cn/posts/javascripts/lucky_number/">队尾幸运编号问题</a></li><li><a href="/zh-cn/posts/javascripts/deepcopy/">深拷贝</a></li><li><a href="/zh-cn/posts/javascripts/regist_dispatch/">消息发布订阅的实现</a></li></ul>
 </section>
 <section class="taxonomy-categories row surface">
   <h4>
     <a href="/zh-cn/categories">分类</a>
   </h4>
   <div><a href="/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="学习笔记">
-      学习笔记 <span class="badge rounded-pill">26</span>
+      学习笔记 <span class="badge rounded-pill">27</span>
     </a><a href="/zh-cn/categories/shortcode/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Shortcode">
       Shortcode <span class="badge rounded-pill">9</span>
     </a><a href="/zh-cn/categories/%E5%BE%85%E5%8A%9E/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="待办">
@@ -251,7 +249,7 @@
     <a href="/zh-cn/series">专栏</a>
   </h4>
   <div><a href="/zh-cn/series/%E5%89%8D%E7%AB%AF/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="前端">
-      前端 <span class="badge rounded-pill">18</span>
+      前端 <span class="badge rounded-pill">19</span>
     </a><a href="/zh-cn/series/%E7%AE%97%E6%B3%95/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="算法">
       算法 <span class="badge rounded-pill">6</span>
     </a><a href="/zh-cn/series/deep-learning/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="deep learning">
@@ -266,7 +264,7 @@
     <a href="/zh-cn/tags">标签</a>
   </h4>
   <div><a href="/zh-cn/tags/javascript/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="JavaScript">
-      JavaScript <span class="badge rounded-pill">5</span>
+      JavaScript <span class="badge rounded-pill">6</span>
     </a><a href="/zh-cn/tags/css/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="CSS">
       CSS <span class="badge rounded-pill">3</span>
     </a><a href="/zh-cn/tags/promise/" class="post-taxonomy rounded-pill btn btn-sm me-2 mb-2" title="Promise">
