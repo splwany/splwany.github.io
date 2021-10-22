@@ -2,14 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/zh-cn/tags/javascript/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/javascripts/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+    <loc>/zh-cn/posts/webnotes/</loc>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/series/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -27,7 +24,7 @@
                 />
   </url><url>
     <loc>/zh-cn/categories/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -45,10 +42,10 @@
                 />
   </url><url>
     <loc>/zh-cn/series/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -65,11 +62,8 @@
                 href="/zh-cn/"
                 />
   </url><url>
-    <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
-  </url><url>
     <loc>/zh-cn/posts/</loc>
-    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -85,6 +79,21 @@
                 hreflang="zh-cn"
                 href="/zh-cn/posts/"
                 />
+  </url><url>
+    <loc>/zh-cn/posts/webnotes/bytedance/</loc>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/categories/%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2021-10-22T14:43:20+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/tags/javascript/</loc>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/posts/javascripts/</loc>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
+  </url><url>
+    <loc>/zh-cn/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-10-17T21:51:13+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/tags/</loc>
     <lastmod>2021-10-17T21:51:13+08:00</lastmod>
@@ -139,9 +148,6 @@
                 />
   </url><url>
     <loc>/zh-cn/posts/webnotes/chinese_flag/</loc>
-    <lastmod>2021-09-17T00:17:03+08:00</lastmod>
-  </url><url>
-    <loc>/zh-cn/posts/webnotes/</loc>
     <lastmod>2021-09-17T00:17:03+08:00</lastmod>
   </url><url>
     <loc>/zh-cn/posts/javascripts/proxy_object/</loc>
